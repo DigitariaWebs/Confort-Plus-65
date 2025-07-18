@@ -104,7 +104,7 @@ const HeroSection = () => {
                 onCanPlay={handleVideoLoad}
                 poster="/Hero.jpg"
               >
-                <source src="/uhd_25fps.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/7517068/uhd_25fps.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </>
