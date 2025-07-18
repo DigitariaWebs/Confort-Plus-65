@@ -1,5 +1,7 @@
 import { Heart, Home, Users, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ServicesSection = () => (
   <section id="services" className="py-20 bg-gray-50">
@@ -21,13 +23,16 @@ const ServicesSection = () => (
             <div className="text-2xl font-bold text-emerald-600">13,99 $/h</div>
           </CardHeader>
           <CardContent>
-            <ul className="text-gray-600 space-y-2">
+            <ul className="text-gray-600 space-y-2 mb-6">
               <li>• Toilette partielle et complète</li>
               <li>• Aide à l&apos;habillement</li>
               <li>• Soins liés à l&apos;incontinence</li>
               <li>• Entretien de la personne</li>
               <li>• Répit aux aidants</li>
             </ul>
+            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
+              <Link href="/services/avq">En savoir plus</Link>
+            </Button>
           </CardContent>
         </Card>
 
@@ -40,13 +45,16 @@ const ServicesSection = () => (
             <div className="text-2xl font-bold text-emerald-600">12,99 $/h</div>
           </CardHeader>
           <CardContent>
-            <ul className="text-gray-600 space-y-2">
+            <ul className="text-gray-600 space-y-2 mb-6">
               <li>• Préparation des repas</li>
               <li>• Entretien ménager</li>
               <li>• Entretien extérieur</li>
               <li>• Accompagnement (rendez-vous, épicerie)</li>
               <li>• Rangement, lessive</li>
             </ul>
+            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
+              <Link href="/services/avd">En savoir plus</Link>
+            </Button>
           </CardContent>
         </Card>
 
@@ -59,19 +67,22 @@ const ServicesSection = () => (
             <div className="text-2xl font-bold text-emerald-600">16,99 $/h</div>
           </CardHeader>
           <CardContent>
-            <ul className="text-gray-600 space-y-2">
+            <ul className="text-gray-600 space-y-2 mb-6">
               <li>• Activités physiques adaptées</li>
               <li>• Animation, loisirs</li>
               <li>• Activités pour personnes alitées</li>
               <li>• Accompagnement spécifique</li>
               <li>• Aide administrative</li>
             </ul>
+            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
+              <Link href="/services/soins-specialises">En savoir plus</Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
 
       <div className="mt-12 text-center">
-        <div className="bg-emerald-600 text-white p-6 rounded-2xl inline-block">
+        <div className="bg-emerald-600 text-white p-6 rounded-2xl inline-block ">
           <Clock className="h-8 w-8 mx-auto mb-2" />
           <p className="text-2xl font-bold">Service 24h/7</p>
           <p className="text-emerald-100">Disponible quand vous en avez besoin</p>
