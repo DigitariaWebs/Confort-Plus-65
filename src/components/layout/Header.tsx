@@ -14,13 +14,15 @@ const Header = () => (
             height={32} 
             className="h-11 w-11"
           />
-          <span className="text-2xl font-bold text-gray-900">Confort Plus 65</span>
+          <span className="text-2xl font-bold text-gray-900">Comfort Plus 65</span>
         </a>
         <div className="flex items-center space-x-8">
           <nav className="hidden md:flex space-x-8">
             <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">Accueil</a>
             <a href="#about" className="text-gray-700 hover:text-emerald-600 transition-colors">À propos</a>
             <a href="#services" className="text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
+            <a href="#careers" className="text-gray-700 hover:text-emerald-600 transition-colors">Carrières</a>
+            <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
           </nav>
           <Button className="bg-emerald-600 hover:bg-emerald-700" asChild>
             <a href="tel:5142228271">

@@ -11,10 +11,10 @@ const AboutSection = () => (
           Notre Engagement envers le Soin
         </span>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          À propos de <span className="text-emerald-600">Confort Plus 65</span>
+          À propos de <span className="text-emerald-600">Comfort Plus 65</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Notre équipe dévouée s'engage à offrir confort, sécurité et une qualité de vie améliorée aux seniors,
+          Notre équipe dévouée s'engage à offrir comfort, sécurité et une qualité de vie améliorée aux seniors,
           que ce soit à domicile, en résidences pour retraités ou en établissements de soins de longue durée.
         </p>
       </div>
@@ -33,7 +33,7 @@ const AboutSection = () => (
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Notre Mission</h3>
           <p className="text-gray-600 mb-6 text-lg">
-            Chez Confort Plus 65, nous comprenons que chaque senior mérite de vivre avec dignité et indépendance.
+            Chez Comfort Plus 65, nous comprenons que chaque senior mérite de vivre avec dignité et indépendance.
             Notre approche bienveillante combine expertise professionnelle et véritable attention pour soutenir les seniors
             dans le maintien de leur qualité de vie.
           </p>
@@ -56,7 +56,7 @@ const AboutSection = () => (
           {
             icon: <Home className="h-8 w-8 text-emerald-600" />,
             title: "Soins à Domicile",
-            content: "Un soutien professionnel dans le confort et la familiarité de votre propre environnement domestique.",
+            content: "Un soutien professionnel dans le comfort et la familiarité de votre propre environnement domestique.",
             badge: "Le Plus Populaire"
           },
           {

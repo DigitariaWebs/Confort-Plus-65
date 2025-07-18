@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
-import { User, Mail, Phone, MessageSquare, CheckCircle2, Home, Briefcase, Award, Upload, Handshake, X } from 'lucide-react';
+import { User, Mail, Phone, MessageSquare, CheckCircle2, Home, Briefcase, Award, Upload, Handshake, X, AlertCircle } from 'lucide-react';
 
 interface FormModalProps {
   isOpen: boolean;
@@ -14,12 +14,25 @@ interface FormModalProps {
 const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, serviceName }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [fileName, setFileName] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
+  const [apiError, setApiError] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
 
   useEffect(() => {
     if (!isOpen) {
       const timer = setTimeout(() => {
         setIsSubmitted(false);
         setFileName('');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setIsLoading(false);
+        setErrors({});
+        setApiError('');
       }, 300);
       return () => clearTimeout(timer);
     }
@@ -42,9 +55,110 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
     };
   }, [isOpen, onClose]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Validation functions
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ''));
+  };
+
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Le nom est requis';
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Le nom doit contenir au moins 2 caractères';
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'L\'email est requis';
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = 'Veuillez entrer une adresse email valide';
+    }
+
+    // Phone validation
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Le numéro de téléphone est requis';
+    } else if (!validatePhone(formData.phone)) {
+      newErrors.phone = 'Veuillez entrer un numéro de téléphone valide';
+    }
+
+    // Message is completely optional - no validation required
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setApiError('');
+    
+    // Validate form first
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      console.log('Submitting form data:', { ...formData, formType, serviceName });
+      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType,
+          serviceName,
+          fileName: fileName || undefined,
+        }),
+      });
+
+      const result = await response.json();
+      console.log('API Response:', result);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error('Error submitting form:', result);
+        setApiError(result.error || 'Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setApiError('Erreur de connexion. Vérifiez votre connexion internet et réessayez.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+    
+    // Clear API error when user makes changes
+    if (apiError) {
+      setApiError('');
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,7 +187,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
     job: {
       icon: <Award className="w-8 h-8 text-white" />,
       title: 'Rejoignez notre équipe',
-      subtitle: 'Nous sommes ravis de l\'intérêt que vous portez à Confort Plus65.',
+      subtitle: 'Nous sommes ravis de l\'intérêt que vous portez à Comfort Plus65.',
       formTitle: 'Postuler maintenant',
       formSubtitle: 'Faites le premier pas vers une carrière enrichissante.'
     },
@@ -118,7 +232,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
                   <h2 className="text-3xl font-bold">{currentContent.title}</h2>
                   <p className="mt-2 opacity-80">{currentContent.subtitle}</p>
               </div>
-               <div className="text-sm opacity-70">© {new Date().getFullYear()} Confort Plus65.</div>
+               <div className="text-sm opacity-70">© {new Date().getFullYear()} Comfort Plus65.</div>
             </div>
 
             {/* Right Column */}
@@ -146,17 +260,67 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
                       <p className="text-gray-500 mt-1">{currentContent.formSubtitle}</p>
                     </div>
                     <motion.form onSubmit={handleSubmit} className="space-y-4" initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.08 }}}}>
+                      {/* API Error Display */}
+                      {apiError && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600"
+                        >
+                          <AlertCircle className="w-5 h-5" />
+                          <span className="text-sm">{apiError}</span>
+                        </motion.div>
+                      )}
+                      
                       <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="relative">
                         <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input type="text" placeholder="Nom complet" required className="w-full pl-12 pr-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 focus:bg-gray-50 transition-all" />
+                        <input 
+                          type="text" 
+                          name="name"
+                          placeholder="Nom complet" 
+                          required 
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className={`w-full pl-12 pr-4 py-3 bg-gray-50 border-2 rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-50 transition-all ${
+                            errors.name 
+                              ? 'border-red-300 focus:ring-red-400 focus:border-red-400' 
+                              : 'border-gray-200 focus:ring-emerald-400 focus:border-emerald-400'
+                          }`}
+                        />
                       </motion.div>
+                      
                       <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="relative">
                         <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input type="email" placeholder="Adresse email" required className="w-full pl-12 pr-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 focus:bg-gray-50 transition-all" />
+                        <input 
+                          type="email" 
+                          name="email"
+                          placeholder="Adresse email" 
+                          required 
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className={`w-full pl-12 pr-4 py-3 bg-gray-50 border-2 rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-50 transition-all ${
+                            errors.email 
+                              ? 'border-red-300 focus:ring-red-400 focus:border-red-400' 
+                              : 'border-gray-200 focus:ring-emerald-400 focus:border-emerald-400'
+                          }`}
+                        />
                       </motion.div>
+                      
                       <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="relative">
                         <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input type="tel" placeholder="Numéro de téléphone" required className="w-full pl-12 pr-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 focus:bg-gray-50 transition-all" />
+                        <input 
+                          type="tel" 
+                          name="phone"
+                          placeholder="Numéro de téléphone" 
+                          required 
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className={`w-full pl-12 pr-4 py-3 bg-gray-50 border-2 rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-50 transition-all ${
+                            errors.phone 
+                              ? 'border-red-300 focus:ring-red-400 focus:border-red-400' 
+                              : 'border-gray-200 focus:ring-emerald-400 focus:border-emerald-400'
+                          }`}
+                        />
                       </motion.div>
                       
                       {formType === 'job' && (
@@ -173,10 +337,29 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
                       
                       <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="relative">
                         <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
-                        <textarea placeholder={formType === 'partnership' ? "Décrivez votre organisation et votre proposition..." : "Votre message ou lettre de motivation..."} rows={formType === 'job' ? 3 : 4} className="w-full pl-12 pr-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 focus:bg-gray-50 transition-all"></textarea>
+                        <textarea 
+                          name="message"
+                          placeholder={formType === 'partnership' ? "Décrivez votre organisation et votre proposition..." : "Votre message ou lettre de motivation..."} 
+                          rows={formType === 'job' ? 3 : 4} 
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          className={`w-full pl-12 pr-4 py-3 bg-gray-50 border-2 rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-50 transition-all ${
+                            errors.message 
+                              ? 'border-red-300 focus:ring-red-400 focus:border-red-400' 
+                              : 'border-gray-200 focus:ring-emerald-400 focus:border-emerald-400'
+                          }`}
+                        ></textarea>
                       </motion.div>
                       <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="pt-2">
-                        <motion.button type="submit" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.98, y: 0 }} className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-4 rounded-xl font-semibold shadow-lg">Envoyer</motion.button>
+                        <motion.button 
+                          type="submit" 
+                          disabled={isLoading}
+                          whileHover={{ scale: 1.05, y: -2 }} 
+                          whileTap={{ scale: 0.98, y: 0 }} 
+                          className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-4 rounded-xl font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {isLoading ? 'Envoi en cours...' : 'Envoyer'}
+                        </motion.button>
                       </motion.div>
                     </motion.form>
                   </motion.div>

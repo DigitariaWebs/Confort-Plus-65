@@ -28,7 +28,7 @@ const HeroSection = () => {
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             Spécialisé dans les soins personnalisés et les services pour les personnes âgées de 65 ans et plus. Nous aidons les seniors
-            à maintenir leur indépendance et leur bien-être dans le confort de leur propre maison.
+            à maintenir leur indépendance et leur bien-être dans le comfort de leur propre maison.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8" onClick={openModal}>

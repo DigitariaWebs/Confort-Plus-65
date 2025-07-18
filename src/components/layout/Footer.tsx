@@ -1,4 +1,5 @@
-import { Heart, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => (
   <footer className="bg-gray-900 text-white py-12">
@@ -6,8 +7,14 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-8">
         <div className="col-span-2">
           <div className="flex items-center space-x-2 mb-4">
-            <Heart className="h-8 w-8 text-emerald-400" fill="#34d399" />
-            <span className="text-2xl font-bold">Confort Plus 65</span>
+            <Image 
+              src="/Logo.svg" 
+              alt="Comfort Plus 65 Logo" 
+              width={32} 
+              height={32} 
+              className="h-10 w-10"
+            />
+            <span className="text-2xl font-bold">Comfort Plus 65</span>
           </div>
           <p className="text-gray-400 mb-4">
             Des soins qui font la différence, une présence qui compte. Services spécialisés pour les personnes âgées de 65 ans et plus.
@@ -19,7 +26,7 @@ const Footer = () => (
             </div>
             <div className="flex items-center space-x-2 text-gray-400">
               <Mail className="h-4 w-4" />
-              <span>info@confortplus65.com</span>
+              <span>info@comfortplus65.com</span>
             </div>
           </div>
         </div>
@@ -46,7 +53,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2025 Confort Plus 65. Tous droits réservés.</p>
+        <p>&copy; 2025 Comfort Plus 65. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

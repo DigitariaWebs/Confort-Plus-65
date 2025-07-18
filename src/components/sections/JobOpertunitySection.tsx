@@ -59,7 +59,7 @@ export const JobOpportunitySection = () => {
             Rejoignez Notre Équipe
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Confort Plus 65 se spécialise dans l'offre de soins et de services destinés aux personnes âgées de 65 ans et plus. 
+            Comfort Plus 65 se spécialise dans l'offre de soins et de services destinés aux personnes âgées de 65 ans et plus. 
             Nous recherchons actuellement des préposés aux bénéficiaires pour renforcer notre équipe et offrir un soutien de qualité à notre précieuse clientèle.
           </p>
         </div>
