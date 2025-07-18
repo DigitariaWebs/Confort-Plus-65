@@ -1,8 +1,23 @@
+"use client"
+
 import Image from "next/image";
 import { Heart, Shield, BadgeCheck, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import FormModal from "../models/ContactModel";
 
-const HeroSection = () => (
+const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
   <section className="bg-gradient-to-br from-emerald-50 to-teal-50 py-30 min-h-[700px]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -16,7 +31,7 @@ const HeroSection = () => (
             à maintenir leur indépendance et leur bien-être dans le confort de leur propre maison.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8">
+            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8" onClick={openModal}>
               <Heart className="h-6 w-6 mr-3" />
               Commencez dès aujourd'hui
             </Button>
@@ -26,9 +41,9 @@ const HeroSection = () => (
               className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 bg-transparent text-lg h-14 px-8"
               asChild
             >
-              <a href="tel:+15145551234">
+              <a href="tel:5142228271">
                 <Phone className="h-6 w-6 mr-3" />
-                Appelez le 514-555-1234
+                Appelez le 514 222 8271
               </a>
             </Button>
           </div>
@@ -67,7 +82,13 @@ const HeroSection = () => (
         </div>
       </div>
     </div>
+    <FormModal
+      isOpen={isModalOpen}
+      onClose={closeModal}
+      formType="consultation"
+    />
   </section>
 );
+};
 
 export default HeroSection;

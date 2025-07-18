@@ -114,7 +114,7 @@ export const ContactSection = () => {
                 
                 <a
                   href="tel:5142228271"
-                  className="border-2 border-white text-white bg-white/10 hover:bg-white hover:text-emerald-600 px-8 py-4 text-lg font-semibold rounded-2xl transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
+                  className="border-2 border-white text-white bg-white/10 hover:bg-white/80 hover:text-emerald-600 px-8 py-4 text-lg font-semibold rounded-2xl transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Appeler maintenant

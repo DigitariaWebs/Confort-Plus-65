@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import AboutSection from "@/components/sections/AboutSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <JobOpportunitySection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }

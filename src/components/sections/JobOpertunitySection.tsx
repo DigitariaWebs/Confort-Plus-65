@@ -1,8 +1,21 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, DollarSign, GraduationCap, Heart, Shield, Phone } from "lucide-react";
+import { CheckCircle, Clock, DollarSign, GraduationCap, Heart, Shield, Phone, Mail } from "lucide-react";
+import { useState } from "react";
+import FormModal from "../models/JobContactModel";
 
 export const JobOpportunitySection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   const qualifications = [
     "Diplôme en Assistance à la personne à domicile (formation reconnue)",
     "Certification PDSB à jour",
@@ -156,12 +169,18 @@ export const JobOpportunitySection = () => {
           <Button 
             size="lg" 
             className="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={openModal}
           >
-            <Phone className="h-5 w-5 mr-2" />
+            <Mail className="h-5 w-5 mr-2" />
             Contactez-nous
           </Button>
         </div>
       </div>
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        formType="job"
+      />
     </section>
   );
 };
