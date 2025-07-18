@@ -12,8 +12,8 @@ const Header = () => (
         <div className="flex items-center space-x-8">
           <nav className="hidden md:flex space-x-8">
             <a href="#" className="text-gray-700 hover:text-emerald-600 transition-colors">Accueil</a>
-            <a href="#services" className="text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
             <a href="#about" className="text-gray-700 hover:text-emerald-600 transition-colors">À propos</a>
+            <a href="#services" className="text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
           </nav>
           <Button className="bg-emerald-600 hover:bg-emerald-700">
             <Phone className="h-4 w-4 mr-2" />
