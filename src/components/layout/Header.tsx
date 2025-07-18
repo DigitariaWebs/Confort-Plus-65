@@ -37,8 +37,8 @@ const Header = () => {
       label: "Services",
       hasDropdown: true,
       dropdownItems: [
-        { href: "/services/avq", label: "Activités de la Vie Quotidienne (AVQ)" },
-        { href: "/services/avd", label: "Activités de la Vie Domestique (AVD)" },
+        { href: "/services/soins-personnalises", label: "Soins personnalisés" },
+        { href: "/services/entretien-menager", label: "Entretien ménager" },
         { href: "/services/soins-specialises", label: "Soins Spécialisés" }
       ]
     },
@@ -54,7 +54,7 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
             <Image 
               src="/Logo.svg" 
-              alt="Confort Plus 65 Logo" 
+              alt="Comfort Plus 65 Logo" 
               width={32} 
               height={32} 
               className="h-8 w-8 sm:h-10 sm:w-10 md:h-11 md:w-11"

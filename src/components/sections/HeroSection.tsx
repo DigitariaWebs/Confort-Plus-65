@@ -40,13 +40,15 @@ const HeroSection = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
-            Des soins qui font <br className="hidden lg:block"/>
-            <span className="text-emerald-600">Une Vraie Différence</span>
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Services d&apos;aide à domicile <br className="hidden lg:block"/>
+            <span className="text-emerald-600">pour personnes de 65 ans et plus</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Spécialisé dans les soins personnalisés et les services pour les personnes âgées de 65 ans et plus. Nous aidons les seniors
-            à maintenir leur indépendance et leur bien-être dans le comfort de leur propre maison.
+            Votre choix c&apos;est de rester dans le confort de votre foyer ? On peut vous aider ! 
+            Nos soins et services de qualité sont adaptés aux besoins spécifiques des personnes âgées, 
+            accessibles et abordables. La personne âgée, ses besoins, ses valeurs, son confort et le respect 
+            de sa dignité sont notre priorité.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8" onClick={openModal}>

@@ -8,8 +8,9 @@ const ServicesSection = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
-        <p className="text-xl text-gray-600">
-          Services de soins complets pour aider les seniors à maintenir leur indépendance à domicile
+        <p className="text-xl max-w-3xl mx-auto leading-relaxed text-gray-600">
+          Nous offrons tous les services nécessaires pour permettre aux personnes âgées de rester dans leur domicile.
+          Nos services sont assurés par des professionnels qualifiés qui agissent avec bienveillance, écoute et respect.
         </p>
       </div>
 
@@ -19,7 +20,7 @@ const ServicesSection = () => (
             <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Heart className="h-8 w-8 text-emerald-600" />
             </div>
-            <CardTitle className="text-emerald-800">Activités de la Vie Quotidienne (AVQ)</CardTitle>
+            <CardTitle className="text-emerald-800">Soins personnalisés</CardTitle>
             <div className="text-2xl font-bold text-emerald-600">13,99 $/h</div>
           </CardHeader>
           <CardContent>
@@ -41,7 +42,7 @@ const ServicesSection = () => (
             <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Home className="h-8 w-8 text-emerald-600" />
             </div>
-            <CardTitle className="text-emerald-800">Activités de la Vie Domestique (AVD)</CardTitle>
+            <CardTitle className="text-emerald-800">Entretien ménager</CardTitle>
             <div className="text-2xl font-bold text-emerald-600">12,99 $/h</div>
           </CardHeader>
           <CardContent>
@@ -49,7 +50,7 @@ const ServicesSection = () => (
               <li>• Préparation des repas</li>
               <li>• Entretien ménager</li>
               <li>• Entretien extérieur</li>
-              <li>• Accompagnement (rendez-vous, épicerie)</li>
+              <li>• Accompagnement</li>
               <li>• Rangement, lessive</li>
             </ul>
             <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
@@ -68,8 +69,8 @@ const ServicesSection = () => (
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Activités physiques adaptées</li>
-              <li>• Animation, loisirs</li>
+              <li>• Activité physique à domicile</li>
+              <li>• Animation et loisirs</li>
               <li>• Activités pour personnes alitées</li>
               <li>• Accompagnement spécifique</li>
               <li>• Aide administrative</li>

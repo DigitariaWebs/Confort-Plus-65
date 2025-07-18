@@ -53,14 +53,15 @@ export const JobOpportunitySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Opportunités de Carrière
+            Offre d&apos;emploi
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Rejoignez Notre Équipe
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comfort Plus 65 se spécialise dans l&apos;offre de soins et de services destinés aux personnes âgées de 65 ans et plus. 
-            Nous recherchons actuellement des préposés aux bénéficiaires pour renforcer notre équipe et offrir un soutien de qualité à notre précieuse clientèle.
+            Comfort Plus 65 se spécialise dans l&apos;offre de soins et de services destinés aux personnes âgées de 65 ans et plus, 
+            les aidant à demeurer dans le comfort de leur domicile. Nous recherchons actuellement des préposés aux bénéficiaires 
+            pour renforcer notre équipe et offrir un soutien de qualité à notre précieuse clientèle.
           </p>
         </div>
 

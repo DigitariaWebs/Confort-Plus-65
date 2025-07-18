@@ -13,9 +13,10 @@ const AboutSection = () => (
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
           À propos de <span className="text-emerald-600">Comfort Plus 65</span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Notre équipe dévouée s&apos;engage à offrir comfort, sécurité et une qualité de vie améliorée aux seniors,
-          que ce soit à domicile, en résidences pour retraités ou en établissements de soins de longue durée.
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          Spécialisés dans les soins et services pour les personnes âgées de 65 ans et plus, 
+          nous leur offrons un accompagnement personnalisé, et professionnel pour préserver leur autonomie et leur bien-être au quotidien. 
+          Que ce soit à domicile, en résidence ou en CHSLD, notre équipe dévouée s&apos;engage à leur apporter réconfort, sécurité et qualité de vie.
         </p>
       </div>
 
@@ -50,6 +51,35 @@ const AboutSection = () => (
         </div>
       </div>
 
+      {/* Competitive Advantage Section */}
+      <div className="bg-emerald-50 rounded-3xl p-12 mb-16">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Un Avantage Concurrentiel Unique</h3>
+        </div>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <Users className="h-8 w-8 text-emerald-600" />
+            </div>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Services Exclusifs pour les 65+</h4>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Notre expertise est entièrement dédiée aux besoins spécifiques des personnes âgées de 65 ans et plus, 
+              garantissant une compréhension approfondie de leurs besoins uniques.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <Heart className="h-8 w-8 text-emerald-600" />
+            </div>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Système de Jumelage Innovant</h4>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Nous associons chaque personne âgée à un professionnel dédié, créant ainsi un lien de confiance unique 
+              pour une aide parfaitement adaptée à ses besoins.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Enhanced Value Cards */}
       <div className="grid md:grid-cols-3 gap-8">
         {[
@@ -60,15 +90,15 @@ const AboutSection = () => (
             badge: "Le Plus Populaire"
           },
           {
-            icon: <Users className="h-8 w-8 text-emerald-600" />,
+            icon: <Heart className="h-8 w-8 text-emerald-600" />,
             title: "Soins Personnalisés",
             content: "Des services adaptés qui respectent les besoins, valeurs et dignité de chaque senior.",
             badge: "Approche Sur Mesure"
           },
           {
-            icon: <Heart className="h-8 w-8 text-emerald-600" />,
-            title: "Équipe Bienveillante",
-            content: "Des professionnels qualifiés qui agissent avec gentillesse, attention et respect.",
+            icon: <Users className="h-8 w-8 text-emerald-600" />,
+            title: "Équipe Qualifiée",
+            content: "Notre personnel est certifié, formé régulièrement et possède toutes les accréditations nécessaires pour offrir des soins de qualité supérieure.",
             badge: "Certifié"
           }
         ].map((item, index) => (

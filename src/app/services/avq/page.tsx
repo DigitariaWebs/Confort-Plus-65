@@ -81,7 +81,7 @@ export default function AVQPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full mb-6">
-                <Heart className="h-10 w-10 text-pink-600" />
+                <Heart className="h-16 w-16 text-pink-600" />
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
                 Soins
@@ -127,28 +127,6 @@ export default function AVQPage() {
           </div>
         </section>
 
-        {/* Breadcrumb Navigation */}
-        <section className="py-6 bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2">
-                <li>
-                  <Link href="/" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                    Accueil
-                  </Link>
-                </li>
-                <li className="text-gray-400">/</li>
-                <li>
-                  <Link href="/#services" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li className="text-gray-400">/</li>
-                <li className="text-pink-600 font-medium">AVQ - Soins Personnels</li>
-              </ol>
-            </nav>
-          </div>
-        </section>
 
         {/* Services Details - Card Layout */}
         <section className="py-20 bg-white">

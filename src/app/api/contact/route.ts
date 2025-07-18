@@ -56,8 +56,8 @@ export async function POST(request: NextRequest) {
 
     // Email to you (the business owner)
     const mailOptions = {
-      from: process.env.SMTP_FROM || 'noreply@confortplus65.com',
-      to: process.env.CONTACT_EMAIL || 'contact@confortplus65.com',
+      from: process.env.SMTP_FROM,
+      to: process.env.CONTACT_EMAIL,
       subject: getSubject(),
       html: `
         <!DOCTYPE html>
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
           <div class="container">
             <div class="header">
               <h1>${getSubject()}</h1>
-              <p>Confort Plus65 - Formulaire de contact du site web</p>
+              <p>Comfort Plus65 - Formulaire de contact du site web</p>
             </div>
             
             <div class="content">
@@ -160,8 +160,8 @@ export async function POST(request: NextRequest) {
             </div>
             
             <div class="footer">
-              <p><strong>Confort Plus65</strong></p>
-              <p>contact@confortplus65.com</p>
+              <p><strong>Comfort Plus65</strong></p>
+              <p>contact@comfortplus65.com</p>
               <p style="margin-top: 10px; opacity: 0.8;">Cet email a été généré automatiquement depuis le formulaire de contact de votre site web.</p>
             </div>
           </div>

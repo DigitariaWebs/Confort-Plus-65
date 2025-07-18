@@ -29,6 +29,9 @@ const Footer = () => (
               <span>confortplus65@gmail.com</span>
             </div>
           </div>
+          <p className="text-gray-400 mt-4">
+            Desservant la grande région de Montréal
+          </p>
         </div>
 
         <div>
