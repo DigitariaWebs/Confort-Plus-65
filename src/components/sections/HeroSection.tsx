@@ -8,17 +8,17 @@ const HeroSection = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
-            Care That Makes <br className="hidden lg:block"/>
-            <span className="text-emerald-600">A Real Difference</span>
+            Des soins qui font <br className="hidden lg:block"/>
+            <span className="text-emerald-600">Une Vraie Différence</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Specializing in personalized care and services for individuals aged 65 and older. We help seniors
-            maintain their independence and well-being in the comfort of their own homes.
+            Spécialisé dans les soins personnalisés et les services pour les personnes âgées de 65 ans et plus. Nous aidons les seniors
+            à maintenir leur indépendance et leur bien-être dans le confort de leur propre maison.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8">
               <Heart className="h-6 w-6 mr-3" />
-              Get Started Today
+              Commencez dès aujourd'hui
             </Button>
             <Button
               size="lg"
@@ -28,7 +28,7 @@ const HeroSection = () => (
             >
               <a href="tel:+15145551234">
                 <Phone className="h-6 w-6 mr-3" />
-                Call 514-555-1234
+                Appelez le 514-555-1234
               </a>
             </Button>
           </div>
@@ -36,18 +36,18 @@ const HeroSection = () => (
           <div className="mt-8 flex flex-wrap gap-4">
             <div className="flex items-center">
               <BadgeCheck className="h-5 w-5 text-emerald-600 mr-2"/>
-              <span className="text-gray-700">Licensed Professionals</span>
+              <span className="text-gray-700">Professionnels Agréés</span>
             </div>
             <div className="flex items-center">
               <Clock className="h-5 w-5 text-emerald-600 mr-2"/>
-              <span className="text-gray-700">24/7 Availability</span>
+              <span className="text-gray-700">Disponibilité 24/7</span>
             </div>
           </div>
         </div>
         <div className="relative">
           <Image
             src="/Hero.jpg"
-            alt="Compassionate caregiver assisting a senior woman with walking at home"
+            alt="Soignant compatissant aidant une femme âgée à marcher chez elle"
             width={600}
             height={500}
             className="rounded-2xl shadow-2xl"
@@ -59,8 +59,8 @@ const HeroSection = () => (
                 <Shield className="h-6 w-6 text-emerald-600" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Trusted Care</p>
-                <p className="text-sm text-gray-600">Professional & Reliable</p>
+                <p className="font-semibold text-gray-900">Soins de Confiance</p>
+                <p className="text-sm text-gray-600">Professionnel & Fiable</p>
               </div>
             </div>
           </div>

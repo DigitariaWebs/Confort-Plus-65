@@ -8,14 +8,14 @@ const AboutSection = () => (
       {/* Enhanced Header */}
       <div className="text-center mb-16">
         <span className="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          Our Commitment to Care
+          Notre Engagement envers le Soin
         </span>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          About <span className="text-emerald-600">Confort Plus 65</span>
+          À propos de <span className="text-emerald-600">Confort Plus 65</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Our dedicated team is committed to offering comfort, safety, and an enhanced quality of life for seniors,
-          whether at home, in retirement residences, or long-term care facilities.
+          Notre équipe dévouée s'engage à offrir confort, sécurité et une qualité de vie améliorée aux seniors,
+          que ce soit à domicile, en résidences pour retraités ou en établissements de soins de longue durée.
         </p>
       </div>
 
@@ -24,27 +24,27 @@ const AboutSection = () => (
         <div>
           <Image
             src="/About.jpg"
-            alt="Our care team assisting seniors with activities"
+            alt="Notre équipe de soins aidant les seniors dans leurs activités"
             width={600}
             height={400}
             className="rounded-xl shadow-lg"
           />
         </div>
         <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Notre Mission</h3>
           <p className="text-gray-600 mb-6 text-lg">
-            At Confort Plus 65, we understand that every senior deserves to live with dignity and independence. 
-            Our compassionate approach combines professional expertise with genuine care to support seniors 
-            in maintaining their quality of life.
+            Chez Confort Plus 65, nous comprenons que chaque senior mérite de vivre avec dignité et indépendance.
+            Notre approche bienveillante combine expertise professionnelle et véritable attention pour soutenir les seniors
+            dans le maintien de leur qualité de vie.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-emerald-50 p-4 rounded-lg">
               <p className="text-3xl font-bold text-emerald-700">24/7</p>
-              <p className="text-gray-600">Support Available</p>
+              <p className="text-gray-600">Support Disponible</p>
             </div>
             <div className="bg-emerald-50 p-4 rounded-lg">
               <p className="text-3xl font-bold text-emerald-700">100%</p>
-              <p className="text-gray-600">Licensed Staff</p>
+              <p className="text-gray-600">Personnel Agréé</p>
             </div>
           </div>
         </div>
@@ -55,21 +55,21 @@ const AboutSection = () => (
         {[
           {
             icon: <Home className="h-8 w-8 text-emerald-600" />,
-            title: "Home Care",
-            content: "Professional support in the comfort and familiarity of your own home environment.",
-            badge: "Most Popular"
+            title: "Soins à Domicile",
+            content: "Un soutien professionnel dans le confort et la familiarité de votre propre environnement domestique.",
+            badge: "Le Plus Populaire"
           },
           {
             icon: <Users className="h-8 w-8 text-emerald-600" />,
-            title: "Personalized Care",
-            content: "Tailored services that respect individual needs, values, and dignity of each senior.",
-            badge: "Custom Approach"
+            title: "Soins Personnalisés",
+            content: "Des services adaptés qui respectent les besoins, valeurs et dignité de chaque senior.",
+            badge: "Approche Sur Mesure"
           },
           {
             icon: <Heart className="h-8 w-8 text-emerald-600" />,
-            title: "Compassionate Team",
-            content: "Qualified professionals who act with kindness, attentiveness, and respect.",
-            badge: "Certified"
+            title: "Équipe Bienveillante",
+            content: "Des professionnels qualifiés qui agissent avec gentillesse, attention et respect.",
+            badge: "Certifié"
           }
         ].map((item, index) => (
           <Card 
@@ -99,13 +99,12 @@ const AboutSection = () => (
       {/* Team Trust Section */}
       <div className="mt-20 bg-emerald-50 rounded-xl p-8 text-center">
         <BadgeCheck className="h-12 w-12 text-emerald-600 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Notre Engagement</h3>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg mb-6">
-          We believe that quality care goes beyond just meeting basic needs. Our team is dedicated to 
-          providing comprehensive support that enhances the overall well-being and happiness of every 
-          senior we serve.
+          Nous croyons que des soins de qualité vont au-delà de la simple satisfaction des besoins de base. Notre équipe est dédiée à
+          fournir un soutien complet qui améliore le bien-être général et le bonheur de chaque senior que nous servons.
         </p>
-        <p className="font-semibold">Trusted by families across the community</p>
+        <p className="font-semibold">Fait confiance par des familles à travers la communauté</p>
       </div>
     </div>
   </section>

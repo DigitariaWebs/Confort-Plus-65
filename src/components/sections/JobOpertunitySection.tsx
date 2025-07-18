@@ -158,7 +158,7 @@ export const JobOpportunitySection = () => {
             className="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <Phone className="h-5 w-5 mr-2" />
-            Contact us
+            Contactez-nous
           </Button>
         </div>
       </div>

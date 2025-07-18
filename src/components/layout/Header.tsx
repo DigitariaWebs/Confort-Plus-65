@@ -17,7 +17,7 @@ const Header = () => (
           </nav>
           <Button className="bg-emerald-600 hover:bg-emerald-700">
             <Phone className="h-4 w-4 mr-2" />
-            Call Now
+            Appeler maintenant
           </Button>
         </div>
       </div>

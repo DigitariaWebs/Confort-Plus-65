@@ -5,9 +5,9 @@ const ServicesSection = () => (
   <section id="services" className="py-20 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
         <p className="text-xl text-gray-600">
-          Comprehensive care services to help seniors maintain their independence at home
+          Services de soins complets pour aider les seniors à maintenir leur indépendance à domicile
         </p>
       </div>
 
@@ -18,7 +18,7 @@ const ServicesSection = () => (
               <Heart className="h-8 w-8 text-emerald-600" />
             </div>
             <CardTitle className="text-emerald-800">Activités de la Vie Quotidienne (AVQ)</CardTitle>
-            <div className="text-2xl font-bold text-emerald-600">$13.99/h</div>
+            <div className="text-2xl font-bold text-emerald-600">13,99 $/h</div>
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2">
@@ -37,7 +37,7 @@ const ServicesSection = () => (
               <Home className="h-8 w-8 text-emerald-600" />
             </div>
             <CardTitle className="text-emerald-800">Activités de la Vie Domestique (AVD)</CardTitle>
-            <div className="text-2xl font-bold text-emerald-600">$12.99/h</div>
+            <div className="text-2xl font-bold text-emerald-600">12,99 $/h</div>
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2">
@@ -56,7 +56,7 @@ const ServicesSection = () => (
               <Users className="h-8 w-8 text-emerald-600" />
             </div>
             <CardTitle className="text-emerald-800">Soins Spécialisés</CardTitle>
-            <div className="text-2xl font-bold text-emerald-600">$16.99/h</div>
+            <div className="text-2xl font-bold text-emerald-600">16,99 $/h</div>
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2">
