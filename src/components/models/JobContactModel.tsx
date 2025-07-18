@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
-import { User, Mail, Phone, MessageSquare, CheckCircle2, Home, Briefcase, Award, Upload, Handshake, X, AlertCircle } from 'lucide-react';
+import { User, Mail, Phone, CheckCircle2, Home, Briefcase, Award, Upload, Handshake, X, AlertCircle } from 'lucide-react';
 
 interface FormModalProps {
   isOpen: boolean;

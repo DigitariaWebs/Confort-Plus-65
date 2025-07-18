@@ -1,4 +1,4 @@
-import { Home, Users, Heart, Shield, BadgeCheck } from "lucide-react";
+import { Home, Users, Heart, BadgeCheck } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ const AboutSection = () => (
           À propos de <span className="text-emerald-600">Comfort Plus 65</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Notre équipe dévouée s'engage à offrir comfort, sécurité et une qualité de vie améliorée aux seniors,
+          Notre équipe dévouée s&apos;engage à offrir comfort, sécurité et une qualité de vie améliorée aux seniors,
           que ce soit à domicile, en résidences pour retraités ou en établissements de soins de longue durée.
         </p>
       </div>

@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8" onClick={openModal}>
               <Heart className="h-6 w-6 mr-3" />
-              Commencez dès aujourd'hui
+              Commencez dès aujourd&apos;hui
             </Button>
             <Button
               size="lg"

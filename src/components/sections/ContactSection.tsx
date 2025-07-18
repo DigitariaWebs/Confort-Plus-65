@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Smartphone, Mail, MapPin, Globe, Users } from "lucide-react";
+import { Phone, Smartphone, Mail, MapPin, Users } from "lucide-react";
 import { useState } from "react";
 import FormModal from "../models/ContactModel";
 
@@ -89,7 +89,7 @@ export const ContactSection = () => {
               <Users className="w-16 h-16 mx-auto mb-6 opacity-90" />
               <h3 className="text-3xl font-bold mb-8">Consultation gratuite</h3>
               <p className="text-xl mb-8 opacity-90">
-                Contactez-nous aujourd'hui pour une évaluation personnalisée de vos besoins. Notre équipe vous accompagnera dans la mise en place des services adaptés.
+                Contactez-nous aujourd&apos;hui pour une évaluation personnalisée de vos besoins. Notre équipe vous accompagnera dans la mise en place des services adaptés.
               </p>
               
               <div className="flex flex-col gap-6">

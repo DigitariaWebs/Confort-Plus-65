@@ -1,8 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, DollarSign, GraduationCap, Heart, Shield, Phone, Mail } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Clock, DollarSign, GraduationCap, Heart, Shield, Mail } from "lucide-react";
 import { useState } from "react";
 import FormModal from "../models/JobContactModel";
 
@@ -20,7 +20,7 @@ export const JobOpportunitySection = () => {
     "Diplôme en Assistance à la personne à domicile (formation reconnue)",
     "Certification PDSB à jour",
     "RCR à jour",
-    "Minimum 6 mois d'expérience dans un poste similaire"
+    "Minimum 6 mois d&apos;expérience dans un poste similaire"
   ];
 
   const requirements = [
@@ -33,7 +33,7 @@ export const JobOpportunitySection = () => {
     "Patient(e) et fiable",
     "Honnête et soucieux(se) du bien-être des personnes âgées",
     "Souhaitez travailler selon votre propre horaire",
-    "Passionné(e) par l'aide aux autres"
+    "Passionné(e) par l&apos;aide aux autres"
   ];
 
   return (
@@ -59,7 +59,7 @@ export const JobOpportunitySection = () => {
             Rejoignez Notre Équipe
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comfort Plus 65 se spécialise dans l'offre de soins et de services destinés aux personnes âgées de 65 ans et plus. 
+            Comfort Plus 65 se spécialise dans l&apos;offre de soins et de services destinés aux personnes âgées de 65 ans et plus. 
             Nous recherchons actuellement des préposés aux bénéficiaires pour renforcer notre équipe et offrir un soutien de qualité à notre précieuse clientèle.
           </p>
         </div>
@@ -83,7 +83,7 @@ export const JobOpportunitySection = () => {
                   ))}
                 </div>
                 <p className="text-lg font-semibold text-emerald-900 mt-6">
-                  Si c'est le cas, vous êtes la personne qu'il nous faut !
+                  Si c&apos;est le cas, vous êtes la personne qu&apos;il nous faut !
                 </p>
               </CardContent>
             </Card>
