@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Printer, Mail, MapPin, Globe, Users } from "lucide-react";
+import { Phone, Smartphone, Mail, MapPin, Globe, Users } from "lucide-react";
 import { useState } from "react";
 import FormModal from "../models/ContactModel";
 
@@ -36,7 +36,7 @@ export const ContactSection = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
                   <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-emerald-600" />
+                    <Smartphone className="w-6 h-6 text-emerald-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Téléphone</h4>
@@ -48,11 +48,11 @@ export const ContactSection = () => {
 
                 <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
                   <div className="w-12 h-12 bg-teal-100 rounded-2xl flex items-center justify-center">
-                    <Printer className="w-6 h-6 text-teal-600" />
+                    <Phone className="w-6 h-6 text-teal-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Fax</h4>
-                    <p className="text-gray-600">514 222-8271</p>
+                    <p className="text-gray-600">514 222 8271</p>
                   </div>
                 </div>
 
@@ -78,18 +78,6 @@ export const ContactSection = () => {
                       3242, Avenue Gonthier.Suite A<br />
                       Montréal.Qc. H1L 6J9
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
-                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Site web</h4>
-                    <a href="https://www.comfort-plus65.com" className="text-gray-600 hover:text-emerald-600 transition-colors">
-                      www.comfort-plus65.com
-                    </a>
                   </div>
                 </div>
               </div>

@@ -25,7 +25,7 @@ const Header = () => (
             <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
           </nav>
           <Button className="bg-emerald-600 hover:bg-emerald-700" asChild>
-            <a href="tel:5142228271">
+            <a href="tel:514 222 8271">
               <Phone className="h-4 w-4 mr-2" />
               Appeler maintenant
             </a>

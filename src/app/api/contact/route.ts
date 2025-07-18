@@ -154,7 +154,7 @@ export async function POST(request: NextRequest) {
               <div style="text-align: center; margin-top: 30px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 500px; margin: 0 auto; padding: 0 20px;">
                     <a href="mailto:${email}" style="background-color: #4299e1; color: white; margin-right: 15px; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500; display: inline-block; text-align: center;">Répondre par email</a>
-                    <a href="tel:${phone}" style="background-color: #48bb78; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500; display: inline-block; text-align: center;">Appeler maintenant</a>
+                    <a href="tel:${phone}" style="background-color: #48bb78w; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500; display: inline-block; text-align: center;">Appeler maintenant</a>
                 </div>
               </div>
             </div>
