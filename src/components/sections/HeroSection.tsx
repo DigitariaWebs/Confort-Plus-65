@@ -2,20 +2,12 @@
 
 import { Heart, Shield, BadgeCheck, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import FormModal from "../models/ContactModel";
 import Image from "next/image";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoError, setVideoError] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -23,16 +15,6 @@ const HeroSection = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-  };
-
-  const handleVideoLoad = () => {
-    setVideoLoaded(true);
-    setVideoError(false);
-  };
-
-  const handleVideoError = () => {
-    setVideoError(true);
-    setVideoLoaded(false);
   };
 
   return (
@@ -78,50 +60,17 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="relative">
-          {!videoError && isClient ? (
-            <>
-              {/* Loading placeholder */}
-              {!videoLoaded && (
-                <div className="absolute inset-0 bg-gray-200 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="animate-pulse text-gray-500">Loading video...</div>
-                </div>
-              )}
-              
-              {/* Video element */}
-              <video
-                ref={videoRef}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className={`rounded-2xl shadow-2xl w-full h-auto transition-opacity duration-500 ${
-                  videoLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-                style={{ maxHeight: '500px', objectFit: 'cover' }}
-                onLoadedData={handleVideoLoad}
-                onError={handleVideoError}
-                onCanPlay={handleVideoLoad}
-                poster="/Hero.jpg"
-              >
-                <source src="https://videos.pexels.com/video-files/7517068/uhd_25fps.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </>
-          ) : (
-            /* Fallback image for when video fails or on server */
-            <Image
-              src="/Hero.jpg"
-              alt="Soignant compatissant aidant une personne âgée"
-              width={600}
-              height={500}
-              className="rounded-2xl shadow-2xl w-full h-auto"
-              style={{ maxHeight: '500px', objectFit: 'cover' }}
-              priority
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-            />
-          )}
+          <Image
+            src="/Hero.jpg"
+            alt="Soignant compatissant aidant une personne âgée"
+            width={600}
+            height={500}
+            className="rounded-2xl shadow-2xl w-full h-auto"
+            style={{ maxHeight: '500px', objectFit: 'cover' }}
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+          />
           
           <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
             <div className="flex items-center space-x-3">
