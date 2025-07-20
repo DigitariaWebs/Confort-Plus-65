@@ -9,15 +9,15 @@ export default function SpecializedCarePage() {
   const services = [
     {
       icon: Activity,
-      title: "Activités Physiques Adaptées",
-      description: "Programmes d'exercices sécuritaires pour maintenir la mobilité",
+      title: "Activités Physiques",
+      description: "Des séances adaptées à votre mobilité pour personnes autonomes, semi-autonomes ou alitées",
       details: [
-        "Exercices de mobilité et étirement",
-        "Activités de renforcement musculaire",
-        "Programmes d'équilibre et prévention des chutes",
-        "Physiothérapie douce et rééducation",
-        "Marche thérapeutique et accompagnée",
-        "Adaptation selon les capacités individuelles"
+        "Séances d'activité physique sur mesure",
+        "Programmes adaptés à votre niveau de mobilité",
+        "Exercices pour personnes autonomes et semi-autonomes",
+        "Activités spécialisées pour personnes alitées",
+        "Encadrement par des professionnels qualifiés",
+        "À votre rythme dans le confort de votre domicile"
       ],
       color: "emerald"
     },
@@ -38,34 +38,46 @@ export default function SpecializedCarePage() {
     {
       icon: Music,
       title: "Animation et Loisirs",
-      description: "Activités récréatives pour le bien-être social et émotionnel",
+      description: "Redonnez du piquant à votre quotidien avec des animations sur mesure",
       details: [
-        "Musicothérapie et chant",
-        "Activités artistiques et créatives",
-        "Jeux et divertissements",
-        "Sorties culturelles et sociales",
-        "Jardinage thérapeutique",
-        "Activités intergénérationnelles"
+        "Animations sur mesure à domicile",
+        "Briser l'isolement social",
+        "Création de moments de plaisir",
+        "Activités de créativité",
+        "Lien social dans votre environnement familier",
+        "Programmes personnalisés selon vos intérêts"
       ],
       color: "purple"
     },
     {
       icon: FileText,
-      title: "Accompagnement Administratif",
-      description: "Aide avec les démarches et la gestion documentaire",
+      title: "Accompagnement",
+      description: "Liberté retrouvée pour vos déplacements et sorties",
       details: [
-        "Aide aux démarches administratives",
-        "Gestion de correspondance",
-        "Accompagnement aux rendez-vous",
-        "Organisation des documents",
-        "Liaison avec les professionnels",
-        "Suivi des prescriptions médicales"
+        "Accompagnement pour rendez-vous médicaux",
+        "Sorties à la bibliothèque",
+        "Sorties culturelles et loisirs",
+        "Assistance avec des professionnels dédiés",
+        "Mobilité sereine et sécurisée",
+        "Service bienveillant et personnalisé"
       ],
       color: "orange"
     }
   ];
 
   const specializedCare = [
+    {
+      title: "Soins Spécialisés",
+      description: "Expertise médicale à domicile avec tranquillité d'esprit garantie",
+      features: [
+        "Prise de médicaments par des infirmières accréditées OIIQ/OIIAQ",
+        "Injections réalisées par des professionnels qualifiés",
+        "Soins médicaux spécialisés à domicile",
+        "Surveillance médicale professionnelle",
+        "Coordination avec l'équipe médicale",
+        "Respect des protocoles de soins"
+      ]
+    },
     {
       title: "Soins Post-Hospitalisation",
       description: "Accompagnement personnalisé pour une récupération optimale",

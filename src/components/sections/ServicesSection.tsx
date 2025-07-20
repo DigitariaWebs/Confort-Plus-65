@@ -25,10 +25,10 @@ const ServicesSection = () => (
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Toilette partielle et complète</li>
-              <li>• Aide à l&apos;habillement</li>
-              <li>• Soins liés à l&apos;incontinence</li>
-              <li>• Entretien de la personne</li>
+              <li>• Aide quotidienne respectueuse</li>
+              <li>• Préservation de votre autonomie</li>
+              <li>• Soins personnalisés sur mesure</li>
+              <li>• Accompagnement bienveillant</li>
               <li>• Répit aux aidants</li>
             </ul>
             <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
@@ -47,11 +47,11 @@ const ServicesSection = () => (
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Préparation des repas</li>
-              <li>• Entretien ménager</li>
-              <li>• Entretien extérieur</li>
-              <li>• Accompagnement</li>
-              <li>• Rangement, lessive</li>
+              <li>• Intérieur impeccable sans effort</li>
+              <li>• Service sécurisé et respectueux</li>
+              <li>• Bien-être et sérénité garantis</li>
+              <li>• Personnel qualifié et de confiance</li>
+              <li>• Entretien préventif et régulier</li>
             </ul>
             <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
               <Link href="/services/avd">En savoir plus</Link>
@@ -69,11 +69,11 @@ const ServicesSection = () => (
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Activité physique à domicile</li>
-              <li>• Animation et loisirs</li>
-              <li>• Activités pour personnes alitées</li>
-              <li>• Accompagnement spécifique</li>
-              <li>• Aide administrative</li>
+              <li>• Activités physiques adaptées</li>
+              <li>• Animation et loisirs sur mesure</li>
+              <li>• Accompagnement pour sorties</li>
+              <li>• Soins médicaux spécialisés</li>
+              <li>• Personnel OIIQ/OIIAQ accrédité</li>
             </ul>
             <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
               <Link href="/services/soins-specialises">En savoir plus</Link>
