@@ -3,11 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const AboutSection = () => (
-  <section id="about" className="py-20 bg-white">
+  <section id="about" className="py-20 bg-gradient-to-br from-white to-emerald-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Enhanced Header */}
       <div className="text-center mb-16">
-        <span className="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <span className="inline-block bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4 shadow-md">
           Notre Engagement envers le Soin
         </span>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -39,11 +39,11 @@ const AboutSection = () => (
             dans le maintien de leur qualité de vie.
           </p>
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-emerald-50 p-4 rounded-lg">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-lg shadow-md">
               <p className="text-3xl font-bold text-emerald-700">24/7</p>
               <p className="text-gray-600">Support Disponible</p>
             </div>
-            <div className="bg-emerald-50 p-4 rounded-lg">
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 rounded-lg shadow-md">
               <p className="text-3xl font-bold text-emerald-700">100%</p>
               <p className="text-gray-600">Personnel Agréé</p>
             </div>
@@ -52,14 +52,14 @@ const AboutSection = () => (
       </div>
 
       {/* Competitive Advantage Section */}
-      <div className="bg-emerald-50 rounded-3xl p-12 mb-16">
+      <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-12 mb-16 shadow-xl">
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Un Avantage Concurrentiel Unique</h3>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Users className="h-8 w-8 text-emerald-600" />
+          <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 shadow-xl border border-emerald-100">
+            <div className="bg-gradient-to-br from-emerald-100 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg">
+              <Users className="h-8 w-8 text-emerald-700" />
             </div>
             <h4 className="text-2xl font-bold text-gray-900 mb-4">Services Exclusifs pour les 65+</h4>
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -67,9 +67,9 @@ const AboutSection = () => (
               garantissant une compréhension approfondie de leurs besoins uniques.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Heart className="h-8 w-8 text-emerald-600" />
+          <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 shadow-xl border border-emerald-100">
+            <div className="bg-gradient-to-br from-teal-100 to-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg">
+              <Heart className="h-8 w-8 text-emerald-700" />
             </div>
             <h4 className="text-2xl font-bold text-gray-900 mb-4">Système de Jumelage Innovant</h4>
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -104,10 +104,10 @@ const AboutSection = () => (
         ].map((item, index) => (
           <Card 
             key={index}
-            className="border-2 border-emerald-50 hover:shadow-lg transition-all"
+            className="border-2 border-emerald-200 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white to-emerald-50"
           >
             <CardHeader className="text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 {item.icon}
               </div>
               <CardTitle className="text-emerald-800 text-2xl">{item.title}</CardTitle>
@@ -127,8 +127,10 @@ const AboutSection = () => (
       </div>
 
       {/* Team Trust Section */}
-      <div className="mt-20 bg-emerald-50 rounded-xl p-8 text-center">
-        <BadgeCheck className="h-12 w-12 text-emerald-600 mx-auto mb-4" />
+      <div className="mt-20 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 text-center shadow-xl">
+        <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
+          <BadgeCheck className="h-12 w-12 text-emerald-700" />
+        </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Notre Engagement</h3>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg mb-6">
           Nous croyons que des soins de qualité vont au-delà de la simple satisfaction des besoins de base. Notre équipe est dédiée à

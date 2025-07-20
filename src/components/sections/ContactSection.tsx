@@ -17,7 +17,7 @@ export const ContactSection = () => {
     setIsModalOpen(false);
   };
   return (
-    <section id="contact" className="py-32 bg-white">
+    <section id="contact" className="py-32 bg-gradient-to-br from-white to-emerald-50">
       <div className="w-full px-6 lg:px-16 xl:px-24">
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
@@ -34,9 +34,9 @@ export const ContactSection = () => {
               <h3 className="text-3xl font-bold text-gray-900 mb-8">Informations de contact</h3>
               
               <div className="space-y-6">
-                <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center">
-                    <Smartphone className="w-6 h-6 text-emerald-600" />
+                <div className="flex items-center space-x-4 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-teal-50 p-3 rounded-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center shadow-md">
+                    <Smartphone className="w-6 h-6 text-emerald-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Téléphone</h4>
@@ -46,9 +46,9 @@ export const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
-                  <div className="w-12 h-12 bg-teal-100 rounded-2xl flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-teal-600" />
+                <div className="flex items-center space-x-4 hover:bg-gradient-to-r hover:from-teal-50 hover:to-cyan-50 p-3 rounded-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl flex items-center justify-center shadow-md">
+                    <Phone className="w-6 h-6 text-teal-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Fax</h4>
@@ -56,9 +56,9 @@ export const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
-                  <div className="w-12 h-12 bg-cyan-100 rounded-2xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-cyan-600" />
+                <div className="flex items-center space-x-4 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-emerald-50 p-3 rounded-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-100 to-emerald-100 rounded-2xl flex items-center justify-center shadow-md">
+                    <Mail className="w-6 h-6 text-cyan-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
@@ -68,9 +68,9 @@ export const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200">
-                  <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-blue-600" />
+                <div className="flex items-center space-x-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-emerald-50 p-3 rounded-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-emerald-100 rounded-2xl flex items-center justify-center shadow-md">
+                    <MapPin className="w-6 h-6 text-blue-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Adresse</h4>

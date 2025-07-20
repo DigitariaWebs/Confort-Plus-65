@@ -1,10 +1,24 @@
+"use client"
+
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Heart, Clock, Shield, Users, CheckCircle, Phone, Star, Sparkles } from "lucide-react";
+import { Heart, Clock, Shield, Users, CheckCircle, Phone, Contact, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState } from "react";
+import FormModal from "@/components/models/ContactModel";
 
 export default function SoinsPersonnalisesPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const services = [
     {
       title: "Soins Personnalisés",
@@ -96,10 +110,13 @@ export default function SoinsPersonnalisesPage() {
             <div className="max-w-md mx-auto mb-12">
               <div className="bg-white rounded-3xl shadow-2xl p-8 border-2 border-emerald-100">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-emerald-600 mb-2">16,99 $</div>
-                  <div className="text-gray-600 text-lg mb-6">par heure</div>
-                  <Button size="lg" className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg h-16 rounded-2xl">
-                    <Phone className="h-6 w-6 mr-3" />
+                  <div className="text-5xl font-bold text-emerald-600 mb-8">16,99 $/h</div>
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg h-16 rounded-2xl cursor-pointer"
+                    onClick={openModal}
+                  >
+                    <Contact className="h-6 w-6 mr-3" />
                     Consultation personnalisée
                   </Button>
                 </div>
@@ -127,28 +144,7 @@ export default function SoinsPersonnalisesPage() {
           </div>
         </section>
 
-        {/* Breadcrumb Navigation */}
-        <section className="py-6 bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2">
-                <li>
-                  <Link href="/" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                    Accueil
-                  </Link>
-                </li>
-                <li className="text-gray-400">/</li>
-                <li>
-                  <Link href="/#services" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li className="text-gray-400">/</li>
-                <li className="text-emerald-600 font-medium">Soins Personnalisés</li>
-              </ol>
-            </nav>
-          </div>
-        </section>
+
 
         {/* Services Details - Card Layout */}
         <section className="py-20 bg-white">
@@ -224,8 +220,12 @@ export default function SoinsPersonnalisesPage() {
               <p className="text-xl text-gray-600 mb-8">
                 Notre approche unique combine expertise professionnelle et chaleur humaine pour des soins exceptionnels.
               </p>
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8 py-4 rounded-2xl">
-                <Phone className="h-6 w-6 mr-3" />
+              <Button 
+                size="lg" 
+                className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8 py-4 rounded-2xl cursor-pointer"
+                onClick={openModal}
+              >
+                <Contact className="h-6 w-6 mr-3" />
                 Découvrir nos soins
               </Button>
             </div>
@@ -242,19 +242,38 @@ export default function SoinsPersonnalisesPage() {
               Contactez-nous pour une consultation gratuite et découvrez comment nos soins personnalisés peuvent améliorer votre qualité de vie.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-4 rounded-2xl">
-                <Phone className="h-6 w-6 mr-3" />
-                Appelez maintenant
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="text-lg px-8 py-4 rounded-2xl bg-white text-emerald-600 hover:bg-emerald-50 hover:text-black shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                asChild
+              >
+                <a href="tel:5142228271">
+                  <Phone className="h-6 w-6 mr-3" />
+                  Appelez maintenant
+                </a>
               </Button>
-              <Link href="/#contact">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 rounded-2xl border-white text-white hover:bg-white hover:text-emerald-600">
-                  Demander un devis
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-4 rounded-2xl border-2 border-white text-emerald-600 bg-white hover:bg-emerald-50 hover:text-black shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={openModal}
+              >
+                <Contact className="h-6 w-6 mr-3" />
+                Demander un devis
+              </Button>
             </div>
           </div>
         </section>
       </main>
+      
+      {/* Contact Modal */}
+      <FormModal 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+        formType="service"
+        serviceName="Soins Personnalisés"
+      />
       <Footer />
     </div>
   );

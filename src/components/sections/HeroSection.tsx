@@ -69,11 +69,11 @@ const HeroSection = () => {
           </div>
           
           <div className="mt-8 flex flex-wrap gap-4">
-            <div className="flex items-center">
+            <div className="flex items-center bg-gradient-to-r from-emerald-50 to-teal-50 px-4 py-2 rounded-full shadow-md">
               <BadgeCheck className="h-5 w-5 text-emerald-600 mr-2"/>
               <span className="text-gray-700">Professionnels Agréés</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center bg-gradient-to-r from-teal-50 to-cyan-50 px-4 py-2 rounded-full shadow-md">
               <Clock className="h-5 w-5 text-emerald-600 mr-2"/>
               <span className="text-gray-700">Disponibilité 24/7</span>
             </div>
@@ -119,10 +119,10 @@ const HeroSection = () => {
             </div>
           )}
           
-          <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+          <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-white to-emerald-50 p-6 rounded-xl shadow-xl border border-emerald-100">
             <div className="flex items-center space-x-3">
-              <div className="bg-emerald-100 p-2 rounded-full">
-                <Shield className="h-6 w-6 text-emerald-600" />
+              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-2 rounded-full shadow-md">
+                <Shield className="h-6 w-6 text-emerald-700" />
               </div>
               <div>
                 <p className="font-semibold text-gray-900">Soins de Confiance</p>

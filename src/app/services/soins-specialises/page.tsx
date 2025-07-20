@@ -1,11 +1,25 @@
+"use client"
+
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Users, Heart, CheckCircle, Phone, Activity, Brain, Music, FileText } from "lucide-react";
+import { Users, Heart, CheckCircle, Phone, Contact, Activity, Brain, Music, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState } from "react";
+import FormModal from "@/components/models/ContactModel";
 
 export default function SpecializedCarePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const services = [
     {
       icon: Activity,
@@ -125,10 +139,10 @@ export default function SpecializedCarePage() {
 
   const getColorClasses = (color: string) => {
     const colorMap = {
-      emerald: { bg: "bg-emerald-100", text: "text-emerald-600", border: "border-emerald-100 hover:border-emerald-200" },
-      blue: { bg: "bg-blue-100", text: "text-blue-600", border: "border-blue-100 hover:border-blue-200" },
-      purple: { bg: "bg-purple-100", text: "text-purple-600", border: "border-purple-100 hover:border-purple-200" },
-      orange: { bg: "bg-orange-100", text: "text-orange-600", border: "border-orange-100 hover:border-orange-200" }
+      emerald: { bg: "bg-gradient-to-br from-emerald-100 to-teal-100", text: "text-emerald-700", border: "border-emerald-200 hover:border-emerald-300" },
+      blue: { bg: "bg-gradient-to-br from-teal-100 to-cyan-100", text: "text-emerald-700", border: "border-emerald-200 hover:border-emerald-300" },
+      purple: { bg: "bg-gradient-to-br from-cyan-100 to-emerald-100", text: "text-emerald-700", border: "border-emerald-200 hover:border-emerald-300" },
+      orange: { bg: "bg-gradient-to-br from-emerald-100 to-green-100", text: "text-emerald-700", border: "border-emerald-200 hover:border-emerald-300" }
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.emerald;
   };
@@ -138,24 +152,24 @@ export default function SpecializedCarePage() {
       <Header />
       <main className="pt-20">
         {/* Hero Section - Modern Medical Theme */}
-        <section className="relative bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 py-20 overflow-hidden">
           {/* Modern geometric patterns */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-purple-200 to-indigo-200 rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl rotate-45 opacity-30"></div>
-            <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-full opacity-15"></div>
+            <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-2xl rotate-45 opacity-30"></div>
+            <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-br from-cyan-200 to-emerald-200 rounded-full opacity-15"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
               <div className="flex justify-center mb-8">
-                <div className="bg-gradient-to-br from-purple-100 to-indigo-100 p-6 rounded-3xl">
-                  <Users className="h-16 w-16 text-purple-600" />
+                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-6 rounded-3xl shadow-lg">
+                  <Users className="h-16 w-16 text-emerald-700" />
                 </div>
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Soins
-                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent block">
+                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent block">
                   Spécialisés
                 </span>
               </h1>
@@ -166,23 +180,31 @@ export default function SpecializedCarePage() {
 
             {/* Feature Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border border-purple-100">
-                <Activity className="h-12 w-12 mx-auto mb-4 text-purple-600" />
+              <div className="bg-gradient-to-br from-white to-emerald-50 backdrop-blur-sm rounded-2xl p-6 text-center border border-emerald-100 shadow-md">
+                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <Activity className="h-8 w-8 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-2">Activités Physiques</h3>
                 <p className="text-gray-600 text-sm">Programmes adaptés</p>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border border-indigo-100">
-                <Brain className="h-12 w-12 mx-auto mb-4 text-indigo-600" />
+              <div className="bg-gradient-to-br from-white to-emerald-50 backdrop-blur-sm rounded-2xl p-6 text-center border border-emerald-100 shadow-md">
+                <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <Brain className="h-8 w-8 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-2">Stimulation Cognitive</h3>
                 <p className="text-gray-600 text-sm">Exercices mentaux</p>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border border-blue-100">
-                <Music className="h-12 w-12 mx-auto mb-4 text-blue-600" />
+              <div className="bg-gradient-to-br from-white to-emerald-50 backdrop-blur-sm rounded-2xl p-6 text-center border border-emerald-100 shadow-md">
+                <div className="bg-gradient-to-br from-cyan-100 to-emerald-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <Music className="h-8 w-8 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-2">Thérapies Créatives</h3>
                 <p className="text-gray-600 text-sm">Art et musique</p>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border border-purple-100">
-                <Heart className="h-12 w-12 mx-auto mb-4 text-purple-600" />
+              <div className="bg-gradient-to-br from-white to-emerald-50 backdrop-blur-sm rounded-2xl p-6 text-center border border-emerald-100 shadow-md">
+                <div className="bg-gradient-to-br from-emerald-100 to-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <Heart className="h-8 w-8 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-2">Soins Palliatifs</h3>
                 <p className="text-gray-600 text-sm">Accompagnement</p>
               </div>
@@ -190,13 +212,16 @@ export default function SpecializedCarePage() {
 
             {/* Pricing Card */}
             <div className="max-w-md mx-auto">
-              <div className="bg-white rounded-3xl shadow-2xl p-8 border-2 border-purple-100">
+              <div className="bg-gradient-to-br from-white to-emerald-50 rounded-3xl shadow-2xl p-8 border-2 border-emerald-200">
                 <div className="text-center">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">
-                    15,99 $
+                  <div className="text-5xl  font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-8">
+                    16,99 $/h
                   </div>
-                  <div className="text-gray-600 text-lg mb-6">par heure</div>
-                  <Button size="lg" className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-lg h-16 rounded-2xl">
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-lg h-16 rounded-2xl shadow-lg cursor-pointer"
+                    onClick={openModal}
+                  >
                     <Phone className="h-6 w-6 mr-3" />
                     Consultation spécialisée
                   </Button>
@@ -206,31 +231,10 @@ export default function SpecializedCarePage() {
           </div>
         </section>
 
-        {/* Breadcrumb Navigation */}
-        <section className="py-6 bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2">
-                <li>
-                  <Link href="/" className="text-gray-500 hover:text-purple-600 transition-colors">
-                    Accueil
-                  </Link>
-                </li>
-                <li className="text-gray-400">/</li>
-                <li>
-                  <Link href="/#services" className="text-gray-500 hover:text-purple-600 transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li className="text-gray-400">/</li>
-                <li className="text-purple-600 font-medium">Soins Spécialisés</li>
-              </ol>
-            </nav>
-          </div>
-        </section>
+
 
         {/* Services with Color-coded Layout */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -246,13 +250,13 @@ export default function SpecializedCarePage() {
                 const IconComponent = service.icon;
                 const colors = getColorClasses(service.color);
                 return (
-                  <Card key={index} className={`border-2 ${colors.border} transition-all duration-300 hover:shadow-xl bg-white overflow-hidden`}>
-                    <CardHeader className={`${colors.bg.replace('100', '50')} pb-6`}>
+                  <Card key={index} className={`border-2 ${colors.border} transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-white to-emerald-50 overflow-hidden`}>
+                    <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 pb-6">
                       <div className="flex items-center mb-4">
-                        <div className={`${colors.bg} p-3 rounded-2xl mr-4`}>
+                        <div className={`${colors.bg} p-3 rounded-2xl mr-4 shadow-md`}>
                           <IconComponent className={`h-8 w-8 ${colors.text}`} />
                         </div>
-                        <CardTitle className={`${colors.text.replace('600', '800')} text-2xl`}>{service.title}</CardTitle>
+                        <CardTitle className="text-emerald-800 text-2xl">{service.title}</CardTitle>
                       </div>
                       <p className="text-gray-700 text-lg">{service.description}</p>
                     </CardHeader>
@@ -260,7 +264,7 @@ export default function SpecializedCarePage() {
                       <ul className="space-y-4">
                         {service.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start">
-                            <CheckCircle className={`h-6 w-6 ${colors.text} mr-4 mt-0.5 flex-shrink-0`} />
+                            <CheckCircle className="h-6 w-6 text-emerald-600 mr-4 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-700 text-lg">{detail}</span>
                           </li>
                         ))}
@@ -274,7 +278,7 @@ export default function SpecializedCarePage() {
         </section>
 
         {/* Specialized Medical Care */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-white to-emerald-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -288,14 +292,14 @@ export default function SpecializedCarePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {specializedCare.map((care, index) => (
                 <div key={index} className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 border border-purple-100">
-                    <h3 className="text-3xl font-bold text-purple-900 mb-4">{care.title}</h3>
+                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-200 shadow-xl">
+                    <h3 className="text-3xl font-bold text-emerald-900 mb-4">{care.title}</h3>
                     <p className="text-lg text-gray-700 mb-6">{care.description}</p>
-                    <div className="bg-white rounded-2xl p-6 shadow-sm">
+                    <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 shadow-md border border-emerald-100">
                       <ul className="space-y-3">
                         {care.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                            <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                             <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
@@ -309,7 +313,7 @@ export default function SpecializedCarePage() {
         </section>
 
         {/* Qualifications */}
-        <section className="py-20 bg-purple-50">
+        <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -322,9 +326,9 @@ export default function SpecializedCarePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {qualifications.map((qualification, index) => (
-                <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                    <CheckCircle className="h-8 w-8 text-purple-600" />
+                <div key={index} className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-all duration-300 border border-emerald-100">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full mb-4 shadow-md">
+                    <CheckCircle className="h-8 w-8 text-emerald-700" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{qualification.title}</h3>
                   <p className="text-gray-600">{qualification.description}</p>
@@ -335,9 +339,9 @@ export default function SpecializedCarePage() {
         </section>
 
         {/* Advanced Care CTA */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-white to-emerald-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-8 lg:p-12 text-white text-center">
+            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-8 lg:p-12 text-white text-center shadow-xl">
               <h2 className="text-4xl font-bold mb-6">
                 Soins Avancés, Résultats Exceptionnels
               </h2>
@@ -345,50 +349,38 @@ export default function SpecializedCarePage() {
                 Bénéficiez de notre expertise en soins spécialisés pour optimiser votre bien-être et votre qualité de vie.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-50 text-lg h-16 px-8 rounded-2xl font-bold">
-                  <Phone className="h-6 w-6 mr-3" />
-                  514 222 8271
+                <Button 
+                  size="lg" 
+                  className="bg-white text-emerald-600 hover:bg-emerald-50 hover:text-black text-lg h-16 px-8 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  asChild
+                >
+                  <a href="tel:5142228271">
+                    <Phone className="h-6 w-6 mr-3" />
+                    Appelez-nous
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 text-lg h-16 px-8 rounded-2xl font-bold">
-                  Évaluation personnalisée
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white text-emerald-600 bg-white hover:bg-emerald-50 hover:text-black text-lg h-16 px-8 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  onClick={openModal}
+                >
+                  <Contact className="h-6 w-6 mr-3" />
+                  Demander une consultation
                 </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-purple-50 p-8 rounded-2xl">
-              <div className="text-center">
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Commencez Votre Parcours de Soins Spécialisés
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Contactez-nous pour une évaluation personnalisée de vos besoins en soins spécialisés.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-lg h-14 px-8">
-                    <Phone className="h-5 w-5 mr-2" />
-                    514 222 8271
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 text-lg h-14 px-8">
-                    Demander une consultation
-                  </Button>
-                </div>
-                
-                {/* Back to Services */}
-                <div className="mt-8">
-                  <Link href="/#services" className="text-purple-600 hover:text-purple-700 font-medium transition-colors">
-                    ← Retour à tous nos services
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
+      
+      {/* Contact Modal */}
+      <FormModal 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+        formType="service"
+        serviceName="Soins Spécialisés"
+      />
       <Footer />
     </div>
   );
