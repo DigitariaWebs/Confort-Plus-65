@@ -32,7 +32,7 @@ const ServicesSection = () => (
               <li>• Répit aux aidants</li>
             </ul>
             <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/services/avq">En savoir plus</Link>
+              <Link href="/services/soins-personnalises">En savoir plus</Link>
             </Button>
           </CardContent>
         </Card>
@@ -54,7 +54,7 @@ const ServicesSection = () => (
               <li>• Entretien préventif et régulier</li>
             </ul>
             <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/services/avd">En savoir plus</Link>
+              <Link href="/services/entretien-menager">En savoir plus</Link>
             </Button>
           </CardContent>
         </Card>

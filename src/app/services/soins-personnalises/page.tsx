@@ -122,7 +122,7 @@ export default function SoinsPersonnalisesPage() {
             <div className="max-w-md mx-auto mb-12">
               <div className="bg-white rounded-3xl shadow-2xl p-8 border-2 border-emerald-100">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-emerald-600 mb-8">16,99 $/h</div>
+                  <div className="text-5xl font-bold text-emerald-600 mb-8">13,99 $/h</div>
                   <Button 
                     size="lg" 
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg h-16 rounded-2xl cursor-pointer"

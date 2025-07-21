@@ -157,7 +157,7 @@ export default function EntretienMenagerPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 mb-8">
                   <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl text-center border border-white/20 flex items-center justify-center h-16">
-                    <div className="text-4xl font-bold text-white">14,99 $/h</div>
+                    <div className="text-4xl font-bold text-white">12,99 $/h</div>
                   </div>
                   <Button 
                     size="lg" 
