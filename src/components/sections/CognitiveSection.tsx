@@ -35,17 +35,17 @@ const CognitiveSection = () => {
     },
     {
       icon: Shield,
-      title: "Maintenir l'Autonomie",
-      description: "Laissez-le faire ce qu'il peut encore réaliser par lui-même"
+      title: "Maintenir l&apos;Autonomie",
+      description: "Laissez-le faire ce qu&apos;il peut encore réaliser par lui-même"
     }
   ];
 
   const keyPrinciples = [
     "Votre proche possède une mémoire affective",
     "Il ressent votre état émotif (anxiété, joie, stress)",
-    "Il désire communiquer même s'il s'exprime différemment",
+    "Il désire communiquer même s&apos;il s&apos;exprime différemment",
     "Il a des périodes de lucidité malgré ses problèmes",
-    "Évitez de parler comme s'il n'était pas là",
+    "Évitez de parler comme s&apos;il n&apos;était pas là",
     "Les routines quotidiennes lui servent de repères"
   ];
 
@@ -78,7 +78,7 @@ const CognitiveSection = () => {
           <Card className="border-2 border-emerald-200 bg-gradient-to-br from-white to-emerald-50 shadow-xl">
             <CardHeader className="bg-gradient-to-r from-emerald-100 to-teal-100 pb-6">
               <CardTitle className="text-2xl text-emerald-800 text-center">
-                Qu'est-ce que les Difficultés Cognitives ?
+                Qu&apos;est-ce que les Difficultés Cognitives ?
               </CardTitle>
             </CardHeader>
             <CardContent className="p-8">
@@ -206,7 +206,7 @@ const CognitiveSection = () => {
               onClick={openModal}
             >
               <Phone className="h-6 w-6 mr-3" />
-              Besoin d'aide ? Contactez-nous
+              Besoin d&apos;aide ? Contactez-nous
             </Button>
           </div>
         </div>

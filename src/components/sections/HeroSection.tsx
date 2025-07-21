@@ -4,7 +4,6 @@ import { Heart, Shield, BadgeCheck, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import FormModal from "../models/ContactModel";
-import Image from "next/image";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

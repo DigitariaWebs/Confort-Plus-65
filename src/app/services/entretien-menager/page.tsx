@@ -2,10 +2,9 @@
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Home, Clock, Shield, CheckCircle, Phone, Contact, ChefHat, Sparkles, Car, ShoppingCart, Wrench, Leaf } from "lucide-react";
+import { Home, Clock, Shield, CheckCircle, Phone, Contact, ChefHat, Sparkles, Wrench, Leaf } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
@@ -390,7 +389,7 @@ export default function EntretienMenagerPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                     <h3 className="text-2xl font-bold text-white mb-2">Notre Engagement</h3>
-                    <p className="text-emerald-100">Une équipe dévouée pour votre confort et votre tranquillité d'esprit</p>
+                    <p className="text-emerald-100">Une équipe dévouée pour votre confort et votre tranquillité d&apos;esprit</p>
                   </div>
                 </div>
               </div>

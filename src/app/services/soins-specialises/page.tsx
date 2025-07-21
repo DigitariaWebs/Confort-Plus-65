@@ -5,7 +5,6 @@ import Header from "@/components/layout/Header";
 import { Users, Heart, CheckCircle, Phone, Contact, Activity, Brain, Music, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";

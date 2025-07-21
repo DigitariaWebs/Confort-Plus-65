@@ -2,9 +2,8 @@
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Heart, Clock, Shield, Users, CheckCircle, Phone, Contact, Star, Sparkles } from "lucide-react";
+import { Clock, Shield, CheckCircle, Phone, Contact, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
