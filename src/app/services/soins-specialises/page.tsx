@@ -6,6 +6,7 @@ import { Users, Heart, CheckCircle, Phone, Contact, Activity, Brain, Music, File
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
 
@@ -153,6 +154,18 @@ export default function SpecializedCarePage() {
       <main className="pt-20">
         {/* Hero Section - Modern Medical Theme */}
         <section className="relative bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 py-20 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/services/carousel2.jpg"
+              alt="Soins spécialisés et thérapies avancées"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 to-emerald-900/70"></div>
+          </div>
+          
           {/* Modern geometric patterns */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full opacity-20 animate-pulse"></div>
@@ -163,17 +176,17 @@ export default function SpecializedCarePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
               <div className="flex justify-center mb-8">
-                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-6 rounded-3xl shadow-lg">
-                  <Users className="h-16 w-16 text-emerald-700" />
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-white/20">
+                  <Users className="h-16 w-16 text-emerald-400" />
                 </div>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Soins
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent block">
+                <span className="text-emerald-400 block">
                   Spécialisés
                 </span>
               </h1>
-              <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+              <p className="text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
                 Thérapies avancées et soins professionnels pour optimiser votre bien-être physique et mental
               </p>
             </div>
@@ -289,21 +302,48 @@ export default function SpecializedCarePage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-16">
               {specializedCare.map((care, index) => (
-                <div key={index} className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-200 shadow-xl">
-                    <h3 className="text-3xl font-bold text-emerald-900 mb-4">{care.title}</h3>
-                    <p className="text-lg text-gray-700 mb-6">{care.description}</p>
-                    <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 shadow-md border border-emerald-100">
-                      <ul className="space-y-3">
-                        {care.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
-                            <span className="text-gray-700">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? '' : 'lg:grid-flow-col-dense'}`}>
+                  {/* Content Side */}
+                  <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                    <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-200 shadow-xl">
+                      <h3 className="text-3xl font-bold text-emerald-900 mb-4">{care.title}</h3>
+                      <p className="text-lg text-gray-700 mb-6">{care.description}</p>
+                      <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 shadow-md border border-emerald-100">
+                        <ul className="space-y-3">
+                          {care.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-start">
+                              <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
+                              <span className="text-gray-700">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Image Side */}
+                  <div className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+                    <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                      <Image
+                        src={
+                          index === 0 ? "/services/aide-a-la-marche-senior.jpg" :
+                          index === 1 ? "/services/blog-banner-caregiver-help-2.jpg" :
+                          index === 2 ? "/services/caregiver-embracing-senior-in-park-free-photo.jpg" :
+                          "/services/soins-personnalises.jpg"
+                        }
+                        alt={`${care.title} - Soins médicaux spécialisés`}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-emerald-900/20 to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-8">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                          <h3 className="text-2xl font-bold text-white mb-2">{care.title}</h3>
+                          <p className="text-emerald-100">{care.description}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

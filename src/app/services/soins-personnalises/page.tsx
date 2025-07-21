@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import { Heart, Clock, Shield, Users, CheckCircle, Phone, Contact, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
 
@@ -85,6 +86,18 @@ export default function SoinsPersonnalisesPage() {
       <main className="pt-20">
         {/* Hero Section - Personalized Care Focused */}
         <section className="relative bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 py-20 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/services/soins-personnalises.jpg"
+              alt="Soins personnalisés pour personnes âgées"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 to-emerald-900/70"></div>
+          </div>
+          
           {/* Decorative elements */}
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-10 left-10 w-20 h-20 bg-emerald-200 rounded-full opacity-30"></div>
@@ -94,14 +107,14 @@ export default function SoinsPersonnalisesPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-emerald-100 rounded-full mb-6">
-                <Star className="h-16 w-16 text-emerald-600" />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
+                <Star className="h-16 w-16 text-emerald-400" />
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
                 Soins
-                <span className="text-emerald-600 block">Personnalisés</span>
+                <span className="text-emerald-400 block">Personnalisés</span>
               </h1>
-              <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+              <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
                 Des soins sur mesure, adaptés à vos besoins uniques, avec une approche humaine et bienveillante
               </p>
             </div>
