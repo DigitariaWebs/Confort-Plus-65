@@ -21,7 +21,7 @@ const ServicesSection = () => (
               <Heart className="h-8 w-8 text-emerald-700" />
             </div>
             <CardTitle className="text-emerald-800">Soins personnalisés</CardTitle>
-            <div className="text-2xl font-bold text-emerald-600">13,99 $/h</div>
+            {/* <div className="text-2xl font-bold text-emerald-600">13,99 $/h</div> */}
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">
@@ -43,7 +43,7 @@ const ServicesSection = () => (
               <Home className="h-8 w-8 text-emerald-700" />
             </div>
             <CardTitle className="text-emerald-800">Entretien ménager</CardTitle>
-            <div className="text-2xl font-bold text-emerald-600">12,99 $/h</div>
+            {/* <div className="text-2xl font-bold text-emerald-600">12,99 $/h</div> */}
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">
@@ -65,7 +65,7 @@ const ServicesSection = () => (
               <Users className="h-8 w-8 text-emerald-700" />
             </div>
             <CardTitle className="text-emerald-800">Soins Spécialisés</CardTitle>
-            <div className="text-2xl font-bold text-emerald-600">16,99 $/h</div>
+            {/* <div className="text-2xl font-bold text-emerald-600">16,99 $/h</div> */}
           </CardHeader>
           <CardContent>
             <ul className="text-gray-600 space-y-2 mb-6">

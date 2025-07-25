@@ -226,9 +226,9 @@ export default function SpecializedCarePage() {
             <div className="max-w-md mx-auto">
               <div className="bg-gradient-to-br from-white to-emerald-50 rounded-3xl shadow-2xl p-8 border-2 border-emerald-200">
                 <div className="text-center">
-                  <div className="text-5xl  font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-8">
+                  {/* <div className="text-5xl  font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-8">
                     16,99 $/h
-                  </div>
+                  </div> */}
                   <Button 
                     size="lg" 
                     className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-lg h-16 rounded-2xl shadow-lg cursor-pointer"

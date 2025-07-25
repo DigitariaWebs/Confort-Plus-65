@@ -156,9 +156,9 @@ export default function EntretienMenagerPage() {
                   Des services complets d&apos;entretien ménager pour maintenir votre intérieur impeccable et votre bien-être au quotidien.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 mb-8">
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl text-center border border-white/20 flex items-center justify-center h-16">
+                  {/* <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl text-center border border-white/20 flex items-center justify-center h-16">
                     <div className="text-4xl font-bold text-white">12,99 $/h</div>
-                  </div>
+                  </div> */}
                   <Button 
                     size="lg" 
                     className="bg-emerald-500 hover:bg-emerald-600 text-lg h-16 px-8 rounded-2xl shadow-lg cursor-pointer"
