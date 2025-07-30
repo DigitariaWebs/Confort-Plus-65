@@ -11,12 +11,10 @@ const AboutSection = () => (
           Notre Engagement envers le Soin
         </span>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          À propos de <span className="text-emerald-600">Comfort Plus 65</span>
+          À propos de <span className="text-emerald-600">Confort Plus 65</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          Spécialisés dans les soins et services pour les personnes âgées de 65 ans et plus, 
-          nous leur offrons un accompagnement personnalisé, et professionnel pour préserver leur autonomie et leur bien-être au quotidien. 
-          Que ce soit à domicile, en résidence ou en CHSLD, notre équipe dévouée s&apos;engage à leur apporter réconfort, sécurité et qualité de vie.
+          On accompagne les personnes âgées de 65 ans et plus dans leur quotidien à domicile. Nos intervenants formés assurent avec humanité et professionnalisme l&apos;aide aux tâches ménagères, la toilette, les repas et le soutien relationnel.
         </p>
       </div>
 
@@ -34,9 +32,7 @@ const AboutSection = () => (
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Notre Mission</h3>
           <p className="text-gray-600 mb-6 text-lg">
-            Chez Comfort Plus 65, nous comprenons que chaque senior mérite de vivre avec dignité et indépendance.
-            Notre approche bienveillante combine expertise professionnelle et véritable attention pour soutenir les seniors
-            dans le maintien de leur qualité de vie.
+            Notre mission est de préserver l&apos;autonomie et la sécurité des personnes âgées, tout en soulageant leurs proches. Une présence réconfortante, adaptée à chaque besoin.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-lg shadow-md">
@@ -56,25 +52,32 @@ const AboutSection = () => (
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Un Avantage Concurrentiel Unique</h3>
         </div>
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 shadow-xl border border-emerald-100">
             <div className="bg-gradient-to-br from-emerald-100 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg">
               <Users className="h-8 w-8 text-emerald-700" />
             </div>
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">Services Exclusifs pour les 65+</h4>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Activités Physiques Adaptées</h4>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Notre expertise est entièrement dédiée aux besoins spécifiques des personnes âgées de 65 ans et plus, 
-              garantissant une compréhension approfondie de leurs besoins uniques.
+              Activités physiques adaptées à domicile par des professionnels qualifiés.
             </p>
           </div>
           <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 shadow-xl border border-emerald-100">
             <div className="bg-gradient-to-br from-teal-100 to-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg">
               <Heart className="h-8 w-8 text-emerald-700" />
             </div>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Services Exclusifs pour les 65+</h4>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Services exclusifs spécialement conçus pour répondre aux besoins uniques des personnes âgées de 65 ans et plus.
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 shadow-xl border border-emerald-100">
+            <div className="bg-gradient-to-br from-cyan-100 to-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg">
+              <BadgeCheck className="h-8 w-8 text-emerald-700" />
+            </div>
             <h4 className="text-2xl font-bold text-gray-900 mb-4">Système de Jumelage Innovant</h4>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Nous associons chaque personne âgée à un professionnel dédié, créant ainsi un lien de confiance unique 
-              pour une aide parfaitement adaptée à ses besoins.
+              Nous associons chaque personne âgée à un professionnel dédié, créant ainsi un lien de confiance unique pour une aide parfaitement adaptée à ses besoins.
             </p>
           </div>
         </div>

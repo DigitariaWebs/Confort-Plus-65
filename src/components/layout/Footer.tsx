@@ -9,15 +9,15 @@ const Footer = () => (
           <div className="flex items-center space-x-2 mb-4">
             <Image 
               src="/Logo.svg" 
-              alt="Comfort Plus 65 Logo" 
+              alt="Confort Plus 65 Logo" 
               width={32} 
               height={32} 
               className="h-10 w-10"
             />
-            <span className="text-2xl font-bold">Comfort Plus 65</span>
+            <span className="text-2xl font-bold">Confort Plus 65</span>
           </div>
           <p className="text-gray-400 mb-4">
-            Des soins qui font la différence, une présence qui compte. Services spécialisés pour les personnes âgées de 65 ans et plus.
+            Soins et services pour personnes âgées de 65 ans&+
           </p>
           <div className="flex space-x-4">
             <div className="flex items-center space-x-2 text-gray-400">
@@ -56,7 +56,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2025 Comfort Plus 65. Tous droits réservés.</p>
+                    <p>&copy; 2025 Confort Plus 65. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

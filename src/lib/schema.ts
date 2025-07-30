@@ -1,11 +1,11 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "HomeHealthcareService",
-  "name": "Comfort Plus 65",
+  "name": "Confort Plus 65",
   "description": "Services de soins à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
-  "url": "https://comfortplus65.com",
+  "url": "https://confortplus65.com",
   "telephone": "+15142228271",
-  "email": "contact@comfortplus65.com",
+  "email": "contact@confortplus65.com",
   "areaServed": {
     "@type": "City",
     "name": "Montréal"

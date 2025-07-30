@@ -43,6 +43,7 @@ const Header = () => {
       ]
     },
     { href: "/#careers", label: "Carrières" },
+    { href: "/cognitif", label: "Cognitif" },
     { href: "/#contact", label: "Contact" },
   ];
 
@@ -54,15 +55,15 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
             <Image 
               src="/Logo.svg" 
-              alt="Comfort Plus 65 Logo" 
+              alt="Confort Plus 65 Logo" 
               width={32} 
               height={32} 
               className="h-8 w-8 sm:h-10 sm:w-10 md:h-11 md:w-11"
             />
             <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
-              <span className="hidden sm:inline">Comfort Plus 65</span>
+              <span className="hidden sm:inline">Confort Plus 65</span>
               <span className="sm:hidden flex flex-col leading-tight">
-                <span>Comfort</span>
+                <span>Confort</span>
                 <span>Plus 65</span>
               </span>
             </span>

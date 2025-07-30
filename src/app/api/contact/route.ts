@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
           <div class="container">
             <div class="header">
               <h1>${getSubject()}</h1>
-              <p>Comfort Plus65 - Formulaire de contact du site web</p>
+              <p>Confort Plus65 - Formulaire de contact du site web</p>
             </div>
             
             <div class="content">
@@ -160,8 +160,8 @@ export async function POST(request: NextRequest) {
             </div>
             
             <div class="footer">
-              <p><strong>Comfort Plus65</strong></p>
-              <p>contact@comfortplus65.com</p>
+                  <p><strong>Confort Plus65</strong></p>
+    <p>contact@confortplus65.com</p>
               <p style="margin-top: 10px; opacity: 0.8;">Cet email a été généré automatiquement depuis le formulaire de contact de votre site web.</p>
             </div>
           </div>

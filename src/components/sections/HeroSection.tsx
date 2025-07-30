@@ -2,7 +2,7 @@
 
 import { Heart, Shield, BadgeCheck, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import FormModal from "../models/ContactModel";
 import Image from "next/image";
 
@@ -10,12 +10,7 @@ const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const [videoLoaded, setVideoLoaded] = useState(false);
   // const [videoError, setVideoError] = useState(false);
-  const [isClient, setIsClient] = useState(false);
   // const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -40,13 +35,15 @@ const HeroSection = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
-            Des soins qui font <br className="hidden lg:block"/>
-            <span className="text-emerald-600">Une Vraie Différence</span>
+          <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 my-6">
+            Soins et services pour personnes  <br className="hidden lg:block"/>
+            <span className="text-emerald-600">agées de 65 ans&+</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Spécialisé dans les soins personnalisés et les services pour les personnes âgées de 65 ans et plus. Nous aidons les seniors
-            à maintenir leur indépendance et leur bien-être dans le comfort de leur propre maison.
+            Spécialisés dans les soins et services pour les personnes âgées de 65 ans et plus, nous offrons un accompagnement personnalisé, et professionnel pour préserver leur autonomie et leur bien-être au quotidien. Que ce soit à domicile, en résidence ou en CHSLD, notre équipe dévouée s&apos;engage à leur apporter réconfort, sécurité et qualité de vie. Confort Plus 65 des soins et services qui font la différence.
+          </p>
+          <p className="text-lg text-emerald-600 font-medium mb-6">
+            Avec vous depuis 2013. Merci pour la confiance!
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg h-14 px-8 cursor-pointer" onClick={openModal}>

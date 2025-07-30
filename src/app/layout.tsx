@@ -15,33 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Comfort Plus 65 - Services de soins à domicile',
-  description: "Comfort Plus 65 offre des services de soins de qualité à domicile dans la grande région de Montréal. Soins personnalisés, aide à domicile et accompagnement pour les personnes âgées de 65 ans et plus.",
+      title: 'Soins et services pour personnes âgées de 65 ans&+',
+    description: "Confort Plus 65 offre des services de soins de qualité à domicile dans la grande région de Montréal. Soins personnalisés, aide à domicile et accompagnement pour les personnes âgées de 65 ans et plus.",
   keywords: "soins à domicile, aide aux personnes âgées, services pour seniors, soins personnalisés, Montréal, aide domestique, accompagnement personnes âgées",
-  authors: [{ name: "Comfort Plus 65" }],
-  creator: "Comfort Plus 65",
-  publisher: "Comfort Plus 65",
+      authors: [{ name: "Confort Plus 65" }],
+    creator: "Confort Plus 65",
+    publisher: "Confort Plus 65",
   robots: "index, follow",
   alternates: {
-    canonical: "https://comfortplus65.com"
+    canonical: "https://confortplus65.com"
   },
   openGraph: {
     type: "website",
-    url: "https://comfortplus65.com",
-    title: "Comfort Plus 65 - Services de soins à domicile",
+    url: "https://confortplus65.com",
+    title: "Soins et services pour personnes âgées de 65 ans&+",
     description: "Services de soins à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
-    siteName: "Comfort Plus 65",
+    siteName: "Confort Plus 65",
     images: [{
       url: "/Logo.svg",
       width: 800,
       height: 600,
-      alt: "Comfort Plus 65 Logo"
+      alt: "Confort Plus 65 Logo"
     }],
     locale: "fr_CA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Comfort Plus 65 - Services de soins à domicile",
+    title: "Soins et services pour personnes âgées de 65 ans&+",
     description: "Services de soins à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
     images: ["/Logo.svg"],
   },

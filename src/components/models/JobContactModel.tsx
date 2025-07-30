@@ -217,7 +217,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
     job: {
       icon: <Award className="w-8 h-8 text-white" />,
       title: 'Rejoignez notre équipe',
-      subtitle: 'Nous sommes ravis de l\'intérêt que vous portez à Comfort Plus 65.',
+              subtitle: 'Nous sommes ravis de l\'intérêt que vous portez à Confort Plus 65.',
       formTitle: 'Postuler maintenant',
       formSubtitle: 'Faites le premier pas vers une carrière enrichissante.'
     },
@@ -431,7 +431,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
                     </div>
                   </div>
               </div>
-               <div className="text-sm opacity-70">© {new Date().getFullYear()} Comfort Plus 65.</div>
+               <div className="text-sm opacity-70">© {new Date().getFullYear()} Confort Plus 65.</div>
             </div>
           </motion.div>
         </motion.div>

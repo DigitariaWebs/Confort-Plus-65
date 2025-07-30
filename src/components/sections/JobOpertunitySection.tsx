@@ -20,20 +20,20 @@ export const JobOpportunitySection = () => {
     "Diplôme en Assistance à la personne à domicile (formation reconnue)",
     "Certification PDSB à jour",
     "RCR à jour",
-    "Minimum 6 mois d&apos;expérience dans un poste similaire"
+    "Minimum 6 mois d'expérience dans un poste similaire"
   ];
 
   const requirements = [
     "Vérification des références professionnelles",
     "Vérification des antécédents judiciaires",
-    "Minimum de disponibilité requis : Blocs de 4 heures par quart de travail"
+    "Minimum de disponibilité requis : Blocks de 4 heures par quart de travail"
   ];
 
   const idealCandidate = [
-    "Patient(e) et fiable",
-    "Honnête et soucieux(se) du bien-être des personnes âgées",
-    "Souhaitez travailler selon votre propre horaire",
-    "Passionné(e) par l&apos;aide aux autres"
+    "Vous êtes préposé(e) aux bénéficiaires, auxiliaire familiale",
+    "Vous êtes patient(e), fiable, honnête et soucieux(se) du bien-être des personnes âgées",
+    "Vous souhaitez travailler selon votre propre horaire",
+    "Vous êtes la personne qu'il nous faut"
   ];
 
   return (
@@ -59,9 +59,7 @@ export const JobOpportunitySection = () => {
             Rejoignez Notre Équipe
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comfort Plus 65 se spécialise dans l&apos;offre de soins et de services destinés aux personnes âgées de 65 ans et plus, 
-            les aidant à demeurer dans le comfort de leur domicile. Nous recherchons actuellement des préposés aux bénéficiaires 
-            pour renforcer notre équipe et offrir un soutien de qualité à notre précieuse clientèle.
+            Confort Plus 65 se spécialise dans l&apos;offre de soins et de services destinés aux personnes âgées de 65 ans et plus, les aidant à demeurer dans le confort de leur domicile. Nous recherchons actuellement des préposés aux bénéficiaires pour renforcer notre équipe et offrir un soutien de qualité à notre précieuse clientèle.
           </p>
         </div>
 
@@ -120,7 +118,7 @@ export const JobOpportunitySection = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 font-semibold">Supérieur à la moyenne</p>
-              <p className="text-sm text-gray-600 mt-2">Package de rémunération compétitif</p>
+                             <p className="text-md text-gray-600 mt-2">Nombre d&apos;heures : Selon disponibilité blocks de 4 heures</p>
             </CardContent>
           </Card>
 
@@ -131,7 +129,7 @@ export const JobOpportunitySection = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 font-semibold">Selon disponibilité</p>
-              <p className="text-sm text-gray-600 mt-2">Blocs de 4 heures</p>
+              <p className="text-md text-gray-600 mt-2">Blocks de 4 heures par quart de travail</p>
             </CardContent>
           </Card>
 
@@ -142,7 +140,7 @@ export const JobOpportunitySection = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 font-semibold">Vérifications requises</p>
-              <p className="text-sm text-gray-600 mt-2">Références professionnelles obligatoires</p>
+              <p className="text-md text-gray-600 mt-2">Références professionnelles obligatoires</p>
             </CardContent>
           </Card>
         </div>

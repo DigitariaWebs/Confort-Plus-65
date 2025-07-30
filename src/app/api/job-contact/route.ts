@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Nouvelle Candidature - Comfort Plus65</title>
+          <title>Nouvelle Candidature - Confort Plus65</title>
           <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2d3748; background-color: #f7fafc; }
@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
             <div class="header">
               <div class="header-content">
                 <h1>Nouvelle Candidature</h1>
-                <p class="subtitle">Département Ressources Humaines - Comfort Plus65</p>
+                <p class="subtitle">Département Ressources Humaines - Confort Plus65</p>
                 <div class="badge">CANDIDATURE SPONTANÉE</div>
               </div>
             </div>
@@ -176,7 +176,7 @@ export async function POST(request: NextRequest) {
                 <h3 style="color: #2d3748; margin-bottom: 20px; font-size: 18px;">Actions recommandées</h3>
                 <div style="text-align: center; margin-top: 30px;">
                   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 500px; margin: 0 auto; padding: 0 20px;">
-                    <a href="mailto:${email}?subject=Votre candidature chez Comfort Plus65&body=Bonjour ${firstName},%0D%0A%0D%0ANous avons bien reçu votre candidature pour le poste de ${position}." style="background-color: #4299e1; color: white; margin-right: 15px; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Répondre au candidat</a>
+                    <a href="mailto:${email}?subject=Votre candidature chez Confort Plus65&body=Bonjour ${firstName},%0D%0A%0D%0ANous avons bien reçu votre candidature pour le poste de ${position}." style="background-color: #4299e1; color: white; margin-right: 15px; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Répondre au candidat</a>
                     <a href="tel:${phone}" style="background-color: #48bb78; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; text-align: center;">Appeler maintenant</a>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export async function POST(request: NextRequest) {
             </div>
             
             <div class="footer">
-              <div class="footer-logo">Comfort Plus65</div>
+              <div class="footer-logo">Confort Plus65</div>
               <p>Département Ressources Humaines</p>
               <p style="margin-top: 10px; opacity: 0.8; font-size: 12px;">
                 Cet email a été généré automatiquement depuis le portail carrières de votre site web.
@@ -198,7 +198,7 @@ export async function POST(request: NextRequest) {
         </html>
       `,
       text: `
-NOUVELLE CANDIDATURE - COMFORT PLUS65
+    NOUVELLE CANDIDATURE - CONFORT PLUS65
 ==========================================
 
 CANDIDAT(E):
@@ -227,7 +227,7 @@ Système de candidatures automatisé
 
     // Send HR notification email
     console.log('📤 Sending HR notification email...');
-    const emailResult = await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
     console.log('✅ HR notification email sent successfully');
     
     if (fileContent && fileName) {

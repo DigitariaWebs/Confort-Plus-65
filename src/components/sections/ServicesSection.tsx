@@ -1,4 +1,4 @@
-import { Heart, Home, Users, Clock } from "lucide-react";
+import { Heart, Home, Users, Clock, Brain } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -80,6 +80,34 @@ const ServicesSection = () => (
             </Button>
           </CardContent>
         </Card>
+      </div>
+
+      {/* Additional Resources Section */}
+      <div className="mt-16">
+        <div className="text-center mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ressources Additionnelles</h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Informations et guides pour mieux comprendre et accompagner les personnes atteintes de troubles cognitifs
+          </p>
+        </div>
+        <div className="max-w-md mx-auto">
+          <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-emerald-50 to-teal-50 hover:shadow-xl">
+            <CardHeader className="text-center">
+              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <Brain className="h-8 w-8 text-emerald-700" />
+              </div>
+              <CardTitle className="text-emerald-800">Difficultés Cognitives</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-gray-600 mb-6">
+                Guide complet pour comprendre et communiquer avec les personnes atteintes de troubles cognitifs
+              </p>
+              <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
+                <Link href="/cognitif">Consulter le guide</Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
       <div className="mt-12 text-center">
