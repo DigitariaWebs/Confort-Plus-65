@@ -43,7 +43,7 @@ const Header = () => {
       ]
     },
     { href: "/#careers", label: "Carrières" },
-    { href: "/cognitif", label: "Cognitif" },
+    { href: "/cognitif", label: "Blog" },
     { href: "/#contact", label: "Contact" },
   ];
 
