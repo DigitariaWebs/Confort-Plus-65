@@ -22,34 +22,34 @@ export default function CognitifPage() {
   const communicationKeys = [
     {
       title: "Établir une relation de confiance",
-      description: "Mon proche continue à éprouver des émotions même s&apos;il ne les exprime plus comme avant. Il faut donc que j&apos;établisse avec lui une relation chaleureuse inspirant la confiance."
+      description: "Mon proche continue à éprouver des émotions même s'il ne les exprime plus comme avant. Il faut donc que j'établisse avec lui une relation chaleureuse inspirant la confiance."
     },
     {
       title: "Me rappeler les effets de la maladie sur ses comportements",
-      description: "Mon proche perd de plus en plus toutes sortes de notions : il oublie les normes, la bienséance, les façons d&apos;agir, la fonction des objets, etc. Je ne dois pas montrer d&apos;étonnement."
+      description: "Mon proche perd de plus en plus toutes sortes de notions : il oublie les normes, la bienséance, les façons d'agir, la fonction des objets, etc. Je ne dois pas montrer d'étonnement."
     },
     {
       title: "Chercher le sens de ses comportements",
-      description: "Les comportements de mon proche traduisent ses émotions, ses besoins, ses tentatives d&apos;adaptation avec les moyens dont il dispose. Ils ne sont pas le fruit de la manipulation ou de la malice : il faut éviter tout jugement négatif."
+      description: "Les comportements de mon proche traduisent ses émotions, ses besoins, ses tentatives d'adaptation avec les moyens dont il dispose. Ils ne sont pas le fruit de la manipulation ou de la malice : il faut éviter tout jugement négatif."
     },
     {
       title: "Maintenir la cohérence et la constance",
-      description: "Comme il perd ses capacités d&apos;adaptation, les routines quotidiennes servent de repères à mon proche. La cohérence entre mes paroles et mes gestes (faire ce que je dis et dire ce que je fais) ainsi que la constance dans l&apos;environnement humain et physique sont essentielles."
+      description: "Comme il perd ses capacités d'adaptation, les routines quotidiennes servent de repères à mon proche. La cohérence entre mes paroles et mes gestes (faire ce que je dis et dire ce que je fais) ainsi que la constance dans l'environnement humain et physique sont essentielles."
     },
     {
       title: "Ajuster mes attentes aux capacités qui lui restent",
-      description: "Pour que mon proche ne soit pas sans cesse confronté à l&apos;échec et que je n&apos;aille pas de déceptions en frustrations, je dois placer mes attentes au niveau de ce qu&apos;il est en mesure de faire."
+      description: "Pour que mon proche ne soit pas sans cesse confronté à l'échec et que je n'aille pas de déceptions en frustrations, je dois placer mes attentes au niveau de ce qu'il est en mesure de faire."
     },
     {
       title: "Maintenir son autonomie le plus longtemps possible",
-      description: "Ses incapacités ne s&apos;étendent pas d&apos;un seul coup à tous les domaines d&apos;activités. Je dois remarquer tout ce qu&apos;il peut encore réaliser par lui-même et le laisser faire."
+      description: "Ses incapacités ne s'étendent pas d'un seul coup à tous les domaines d'activités. Je dois remarquer tout ce qu'il peut encore réaliser par lui-même et le laisser faire."
     }
   ];
 
   const attentionTips = [
     "Avant de lui adresser la parole, s'il ne me voit pas, je lui manifeste ma présence, soit en faisant un peu de bruit, soit en chantant. Il est toujours préférable de l'approcher par-devant… cela lui évite un sursaut.",
-    "J&apos;élimine les bruits inutiles comme la radio et le téléviseur avant d&apos;engager la conversation avec mon proche… je capterai mieux son attention.",
-    "Je bouge lentement et je me place face à lui. S&apos;il est assis, je m&apos;assois pour être à sa hauteur. J&apos;établis un contact visuel et je le touche doucement… je ne devrais jamais engager une conversation dans un climat de précipitation."
+    "J'élimine les bruits inutiles comme la radio et le téléviseur avant d'engager la conversation avec mon proche… je capterai mieux son attention.",
+    "Je bouge lentement et je me place face à lui. S'il est assis, je m'assois pour être à sa hauteur. J'établis un contact visuel et je le touche doucement… je ne devrais jamais engager une conversation dans un climat de précipitation."
   ];
 
   const importantPoints = [
@@ -138,7 +138,7 @@ export default function CognitifPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
                              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                 Des petits trucs pour capter l&apos;attention de mon proche
+                  Des petits trucs pour capter l&apos;attention de mon proche
                </h2>
             </div>
 

@@ -35,17 +35,17 @@ const CognitiveSection = () => {
     },
     {
       icon: Shield,
-      title: "Maintenir l&apos;Autonomie",
-      description: "Laissez-le faire ce qu&apos;il peut encore réaliser par lui-même"
+      title: "Maintenir l'Autonomie",
+      description: "Laissez-le faire ce qu'il peut encore réaliser par lui-même"
     }
   ];
 
   const keyPrinciples = [
     "Votre proche possède une mémoire affective",
     "Il ressent votre état émotif (anxiété, joie, stress)",
-    "Il désire communiquer même s&apos;il s&apos;exprime différemment",
+    "Il désire communiquer même s'il s'exprime différemment",
     "Il a des périodes de lucidité malgré ses problèmes",
-    "Évitez de parler comme s&apos;il n&apos;était pas là",
+    "Évitez de parler comme s'il n'était pas là",
     "Les routines quotidiennes lui servent de repères"
   ];
 
