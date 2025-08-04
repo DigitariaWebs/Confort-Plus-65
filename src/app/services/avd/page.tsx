@@ -2,7 +2,7 @@
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Home, Clock, Shield, CheckCircle, Phone, Contact, ChefHat, Sparkles, Wrench, Leaf } from "lucide-react";
+import { Home, Clock, Shield, CheckCircle, Phone, Contact, ChefHat, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -440,7 +440,7 @@ export default function AVDPage() {
         <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Besoin d'aide pour vos activités quotidiennes ?
+              Besoin d&apos;aide pour vos activités quotidiennes ?
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
               Contactez-nous pour une évaluation personnalisée de vos besoins en services AVD et découvrez comment nous pouvons vous aider à maintenir votre autonomie.

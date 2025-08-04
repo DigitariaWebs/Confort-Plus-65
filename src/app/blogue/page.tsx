@@ -2,7 +2,7 @@
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Brain, Heart, ChevronRight, Phone, Contact, CheckCircle, AlertCircle, Info, ArrowRight, Users } from "lucide-react";
+import { Brain, Heart, Phone, Contact, CheckCircle, AlertCircle, Info, ArrowRight, Users } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -63,10 +63,10 @@ export default function BlogPage() {
                   </h2>
                   <div className="prose prose-emerald max-w-none">
                     <p className="text-gray-600 leading-relaxed">
-                      Le terme cognitif renvoie à l'ensemble des processus psychiques liés à l'esprit. 
+                      Le terme cognitif renvoie à l&apos;ensemble des processus psychiques liés à l&apos;esprit. 
                       Ainsi le langage, la mémoire, le raisonnement, la coordination des mouvements (praxies), 
                       les reconnaissances (gnosies), les fonctions exécutives regroupant le raisonnement, 
-                      le jugement, la planification, l'organisation et les fonctions de perception sont des 
+                      le jugement, la planification, l&apos;organisation et les fonctions de perception sont des 
                       fonctions cognitives. Ce sont des fonctions orchestrées par le cerveau.
                     </p>
                     <p className="text-gray-600 mt-4">
@@ -83,13 +83,13 @@ export default function BlogPage() {
                   <div className="bg-emerald-50 rounded-3xl p-8 mb-8">
                     <p className="text-gray-700 mb-6">
                       Si votre proche souffre de troubles cognitifs la communication avec lui ne peut pas 
-                      s'établir de la même façon qu'avant, il faut savoir que malgré ses problèmes cognitifs :
+                      s&apos;établir de la même façon qu&apos;avant, il faut savoir que malgré ses problèmes cognitifs :
                     </p>
                     <ul className="space-y-4">
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche possède une mémoire affective, il peut se souvenir de l'émotion 
-                        vécue sans se souvenir de l'événement ayant provoqué cette émotion.</span>
+                        <span>Votre proche possède une mémoire affective, il peut se souvenir de l&apos;émotion 
+                        vécue sans se souvenir de l&apos;événement ayant provoqué cette émotion.</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
@@ -98,12 +98,12 @@ export default function BlogPage() {
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche désire communiquer même s'il en est incapable de la même façon 
-                        qu'avant.</span>
+                        <span>Votre proche désire communiquer même s&apos;il en est incapable de la même façon 
+                        qu&apos;avant.</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche est un adulte. Il est plus respectueux de ne pas s'adresser 
+                        <span>Votre proche est un adulte. Il est plus respectueux de ne pas s&apos;adresser 
                         à lui comme à un enfant.</span>
                       </li>
                     </ul>
@@ -139,7 +139,7 @@ export default function BlogPage() {
                       <p className="text-gray-600">Ajuster les attentes aux capacités actuelles.</p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">6. Encourager l'autonomie</h4>
+                      <h4 className="font-semibold text-emerald-700 mb-2">6. Encourager l&apos;autonomie</h4>
                       <p className="text-gray-600">Permettre de maintenir les activités encore possibles.</p>
                     </div>
                   </div>
