@@ -15,67 +15,175 @@ const ServicesSection = () => (
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8">
-        <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-white to-emerald-50 hover:shadow-xl">
+        <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-white to-emerald-50 hover:shadow-xl flex flex-col h-full">
           <CardHeader className="text-center">
             <div className="bg-gradient-to-br from-emerald-100 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Heart className="h-8 w-8 text-emerald-700" />
             </div>
-            <CardTitle className="text-emerald-800">Soins personnalisés</CardTitle>
-            {/* <div className="text-2xl font-bold text-emerald-600">13,99 $/h</div> */}
+            <CardTitle className="text-emerald-800 min-h-[60px] flex items-center justify-center">Les services d’aides pour activités de la vie quotidienne (AVQ)</CardTitle>
           </CardHeader>
-          <CardContent>
-            <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Aide quotidienne respectueuse</li>
-              <li>• Préservation de votre autonomie</li>
-              <li>• Soins personnalisés sur mesure</li>
-              <li>• Accompagnement bienveillant</li>
-              <li>• Répit aux aidants</li>
-            </ul>
-            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/services/soins-personnalises">En savoir plus</Link>
+          <CardContent className="flex flex-col flex-grow justify-between">
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Bain/Douche</p>
+                  <p className="text-sm text-gray-600">Se laver, y compris entrer et sortir de la baignoire ou de la douche</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Habillement</p>
+                  <p className="text-sm text-gray-600">Mettre et enlever ses vêtements</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Alimentation</p>
+                  <p className="text-sm text-gray-600">Se nourrir de manière autonome</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Toilette</p>
+                  <p className="text-sm text-gray-600">Gérer les fonctions intestinales et urinaires, se rendre aux toilettes, les utiliser correctement et se nettoyer</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Mobilité/Transferts</p>
+                  <p className="text-sm text-gray-600">Se déplacer d’un endroit à un autre, marcher, se lever et s’asseoir</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Hygiène personnelle</p>
+                  <p className="text-sm text-gray-600">Soins corporels, bucco-dentaires, capillaires et des ongles</p>
+                </div>
+              </div>
+            </div>
+            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700 mt-auto">
+              <Link href="/services/avq">En savoir plus</Link>
             </Button>
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-white to-emerald-50 hover:shadow-xl">
+        <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-white to-emerald-50 hover:shadow-xl flex flex-col h-full">
           <CardHeader className="text-center">
             <div className="bg-gradient-to-br from-teal-100 to-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Home className="h-8 w-8 text-emerald-700" />
             </div>
-            <CardTitle className="text-emerald-800">Entretien ménager</CardTitle>
-            {/* <div className="text-2xl font-bold text-emerald-600">12,99 $/h</div> */}
+            <CardTitle className="text-emerald-800 min-h-[60px] flex items-center justify-center">Les services d’aide pour activités de la vie domestique ( AVD)</CardTitle>
           </CardHeader>
-          <CardContent>
-            <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Intérieur impeccable sans effort</li>
-              <li>• Service sécurisé et respectueux</li>
-              <li>• Bien-être et sérénité garantis</li>
-              <li>• Personnel qualifié et de confiance</li>
-              <li>• Entretien préventif et régulier</li>
-            </ul>
-            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/services/entretien-menager">En savoir plus</Link>
+          <CardContent className="flex flex-col flex-grow justify-between">
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Gestion des finances</p>
+                  <p className="text-sm text-gray-600">Payer les factures, gérer un budget et un compte bancaire</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Courses</p>
+                  <p className="text-sm text-gray-600">Faire l’épicerie et acheter les produits nécessaires</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Préparation des repas</p>
+                  <p className="text-sm text-gray-600">Planifier, cuisiner et nettoyer après les repas</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Entretien ménager</p>
+                  <p className="text-sm text-gray-600">Nettoyer, faire la lessive et assurer un environnement sécuritaire</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Transport</p>
+                  <p className="text-sm text-gray-600">Se déplacer en voiture, en transport en commun ou organiser des trajets</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Communication</p>
+                  <p className="text-sm text-gray-600">Utiliser le téléphone, écrire des courriels ou des lettres et gérer son courrier</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Gestion des médicaments</p>
+                  <p className="text-sm text-gray-600">Prendre ses médicaments selon les prescriptions et renouveler ses ordonnances</p>
+                </div>
+              </div>
+            </div>
+            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700 mt-auto">
+              <Link href="/services/avd">En savoir plus</Link>
             </Button>
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-white to-emerald-50 hover:shadow-xl">
+        <Card className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 bg-gradient-to-br from-white to-emerald-50 hover:shadow-xl flex flex-col h-full">
           <CardHeader className="text-center">
             <div className="bg-gradient-to-br from-cyan-100 to-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Users className="h-8 w-8 text-emerald-700" />
             </div>
-            <CardTitle className="text-emerald-800">Soins Spécialisés</CardTitle>
-            {/* <div className="text-2xl font-bold text-emerald-600">16,99 $/h</div> */}
+            <CardTitle className="text-emerald-800 min-h-[60px] flex items-center justify-center">Soins spécialisés</CardTitle>
           </CardHeader>
-          <CardContent>
-            <ul className="text-gray-600 space-y-2 mb-6">
-              <li>• Activités physiques adaptées</li>
-              <li>• Animation et loisirs sur mesure</li>
-              <li>• Accompagnement pour sorties</li>
-              <li>• Soins médicaux spécialisés</li>
-              <li>• Personnel OIIQ/OIIAQ accrédité</li>
-            </ul>
-            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
+          <CardContent className="flex flex-col flex-grow justify-between">
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Activités physiques à domicile</p>
+                  <p className="text-sm text-gray-600">Programmes d'exercices adaptés à vos capacités</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Animation et loisirs</p>
+                  <p className="text-sm text-gray-600">Activités récréatives et de stimulation cognitive</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Aide administrative</p>
+                  <p className="text-sm text-gray-600">Accompagnement pour les démarches et documents administratifs</p>
+                </div>
+              </div>
+              {/* <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Soins médicaux spécialisés</p>
+                  <p className="text-sm text-gray-600">Personnel OIIQ/OIIAQ accrédité pour soins avancés</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="font-semibold text-gray-800">Accompagnement pour sorties</p>
+                  <p className="text-sm text-gray-600">Sorties sécurisées pour rendez-vous et activités</p>
+                </div>
+              </div> */}
+            </div>
+            <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700 mt-auto">
               <Link href="/services/soins-specialises">En savoir plus</Link>
             </Button>
           </CardContent>

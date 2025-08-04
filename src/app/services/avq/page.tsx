@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
 
-export default function SoinsPersonnalisesPage() {
+export default function AVQPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -21,51 +21,75 @@ export default function SoinsPersonnalisesPage() {
 
   const services = [
     {
-      title: "Soins Personnalisés",
-      description: "Préservation de votre autonomie avec notre accompagnement personnalisé à domicile",
+      title: "Bain/Douche",
+      description: "Assistance pour l'hygiène corporelle",
       details: [
-        "Aide quotidienne respectueuse (toilette, habillage, repas)",
-        "Préservation de votre dignité et sécurité",
-        "Accompagnement bienveillant et professionnel",
-        "Respect de vos préférences et habitudes",
-        "Coordination avec votre famille",
-        "Adaptation selon vos besoins spécifiques"
+        "Se laver de manière sécurisée",
+        "Entrer et sortir de la baignoire",
+        "Utilisation de la douche",
+        "Support pendant la toilette",
+        "Assistance adaptée aux capacités",
+        "Maintien de la dignité"
       ]
     },
     {
-      title: "Répit aux Aidants",
-      description: "Votre pause méritée pour recharger vos batteries en toute quiétude",
+      title: "Habillement",
+      description: "Assistance pour l'habillage quotidien",
       details: [
-        "Confiez-nous votre proche âgé le temps d'une pause",
-        "Relève à domicile professionnelle et sécurisée",
-        "Permet aux aidants de souffler et se ressourcer",
-        "Service disponible selon vos besoins",
-        "Accompagnement bienveillant et respectueux",
-        "Tranquillité d'esprit garantie"
+        "Mettre ses vêtements",
+        "Enlever ses vêtements",
+        "Choix approprié des tenues",
+        "Aide à l'habillage adapté",
+        "Support pour les boutons et fermetures",
+        "Respect de l'indépendance"
       ]
     },
     {
-      title: "Soins de Confort Avancés",
-      description: "Techniques spécialisées pour votre bien-être optimal",
+      title: "Alimentation",
+      description: "Support pour une alimentation autonome",
       details: [
-        "Massages thérapeutiques",
-        "Techniques de relaxation",
-        "Gestion de la douleur",
-        "Soins de confort",
-        "Positionnement optimal",
-        "Techniques de respiration"
+        "Se nourrir de manière autonome",
+        "Assistance aux repas",
+        "Aide à la prise des aliments",
+        "Position confortable pour manger",
+        "Support pour boire",
+        "Maintien de la dignité pendant les repas"
       ]
     },
     {
-      title: "Services Adaptatifs",
-      description: "Flexibilité totale selon vos besoins du moment",
+      title: "Toilette",
+      description: "Assistance pour les besoins naturels",
       details: [
-        "Horaires personnalisés",
-        "Services à la demande",
-        "Adaptation en temps réel",
-        "Planification flexible",
-        "Services d'urgence",
-        "Accompagnement ponctuel"
+        "Gérer les fonctions intestinales et urinaires",
+        "Se rendre aux toilettes",
+        "Utiliser correctement les toilettes",
+        "Se nettoyer après usage",
+        "Maintien de l'hygiène",
+        "Respect de l'intimité"
+      ]
+    },
+    {
+      title: "Mobilité/Transferts",
+      description: "Assistance pour les déplacements",
+      details: [
+        "Se déplacer d'un endroit à un autre",
+        "Marcher de façon sécurisée",
+        "Se lever en toute sécurité",
+        "S'asseoir correctement",
+        "Transferts sécurisés",
+        "Support à la mobilité"
+      ]
+    },
+    {
+      title: "Hygiène personnelle",
+      description: "Soins corporels essentiels",
+      details: [
+        "Soins corporels quotidiens",
+        "Soins bucco-dentaires",
+        "Soins capillaires",
+        "Soins des ongles",
+        "Maintien de la propreté",
+        "Respect des habitudes personnelles"
       ]
     }
   ];
@@ -110,11 +134,11 @@ export default function SoinsPersonnalisesPage() {
                 <Star className="h-16 w-16 text-emerald-400" />
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-                Soins
-                <span className="text-emerald-400 block">Personnalisés</span>
+                Activités de la vie
+                <span className="text-emerald-400 block">Quotidienne (AVQ)</span>
               </h1>
               <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
-                Des soins sur mesure, adaptés à vos besoins uniques, avec une approche humaine et bienveillante
+                Assistance professionnelle pour les activités essentielles de votre quotidien, dans le respect de votre autonomie
               </p>
             </div>
 
@@ -163,10 +187,10 @@ export default function SoinsPersonnalisesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Nos Services Personnalisés
+                Nos Services AVQ
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Chaque service est conçu spécialement pour vous, avec une approche unique et adaptée à vos besoins.
+                Une assistance professionnelle et bienveillante pour toutes les activités essentielles de votre vie quotidienne.
               </p>
             </div>
 
@@ -284,7 +308,7 @@ export default function SoinsPersonnalisesPage() {
         isOpen={isModalOpen} 
         onClose={closeModal} 
         formType="service"
-        serviceName="Soins Personnalisés"
+        serviceName="AVQ"
       />
       <Footer />
     </div>

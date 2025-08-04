@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
 
-export default function EntretienMenagerPage() {
+export default function AVDPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -23,99 +23,138 @@ export default function EntretienMenagerPage() {
   const services = [
     {
       icon: Sparkles,
-      title: "Entretien Ménager",
-      description: "Tranquillité garantie avec un intérieur impeccable sans effort",
+      title: "Gestion des finances",
+      description: "Assistance pour la gestion financière quotidienne",
       details: [
-        "Service sécurisé et respectueux de vos besoins",
-        "Assure bien-être et sérénité à domicile",
-        "Nettoyage complet et professionnel",
-        "Entretien régulier et préventif",
-        "Respect de votre environnement familier",
-        "Personnel qualifié et de confiance"
+        "Paiement des factures",
+        "Gestion du budget",
+        "Suivi des comptes bancaires",
+        "Organisation des documents financiers",
+        "Aide aux transactions courantes",
+        "Planification financière simple"
       ]
     },
     {
       icon: ChefHat,
-      title: "Préparation des Repas",
-      description: "Cuisine nutritive et savoureuse adaptée à vos goûts",
+      title: "Courses et approvisionnement",
+      description: "Support pour vos achats et courses quotidiennes",
       details: [
-        "Planification de menus équilibrés",
-        "Préparation de repas frais",
-        "Adaptation aux régimes spéciaux",
+        "Faire l'épicerie",
+        "Achat des produits nécessaires",
+        "Liste de courses personnalisée",
+        "Transport des achats",
+        "Rangement des provisions",
+        "Vérification des stocks"
+      ]
+    },
+    {
+      icon: Home,
+      title: "Préparation des repas",
+      description: "Service complet de préparation culinaire",
+      details: [
+        "Planification des menus",
+        "Cuisine des repas",
+        "Nettoyage après les repas",
         "Respect des préférences alimentaires",
-        "Aide à l'alimentation si nécessaire",
-        "Préparation de collations saines"
+        "Organisation de la cuisine",
+        "Stockage approprié des aliments"
       ]
     },
     {
-      icon: Wrench,
-      title: "Entretien Préventif",
-      description: "Maintenance régulière pour préserver votre intérieur",
+      icon: Sparkles,
+      title: "Entretien ménager",
+      description: "Maintien d'un environnement propre et sécuritaire",
       details: [
-        "Entretien des appareils ménagers",
-        "Maintenance préventive",
-        "Petit bricolage sécuritaire",
-        "Vérification des systèmes",
-        "Nettoyage en profondeur",
-        "Organisation des espaces"
+        "Nettoyage des espaces de vie",
+        "Service de lessive complet",
+        "Repassage des vêtements",
+        "Entretien régulier",
+        "Organisation des espaces",
+        "Maintien de la propreté"
       ]
     },
     {
-      icon: Leaf,
-      title: "Entretien Extérieur",
-      description: "Soin de vos espaces extérieurs et jardin",
+      icon: Clock,
+      title: "Transport",
+      description: "Solutions de transport adaptées à vos besoins",
       details: [
-        "Entretien du jardin et des plantes",
-        "Nettoyage des entrées",
-        "Déneigement léger",
-        "Arrosage des plantes",
-        "Entretien des espaces extérieurs",
-        "Petits travaux d'extérieur"
+        "Transport en voiture",
+        "Accompagnement en transport en commun",
+        "Organisation des trajets",
+        "Planification des déplacements",
+        "Transport sécuritaire",
+        "Assistance porte-à-porte"
+      ]
+    },
+    {
+      icon: Phone,
+      title: "Communication",
+      description: "Aide à la gestion des communications",
+      details: [
+        "Utilisation du téléphone",
+        "Rédaction d'emails",
+        "Écriture de lettres",
+        "Gestion du courrier",
+        "Organisation des documents",
+        "Suivi des correspondances"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Gestion des médicaments",
+      description: "Suivi et gestion de la médication",
+      details: [
+        "Prise des médicaments selon prescriptions",
+        "Renouvellement des ordonnances",
+        "Suivi des doses",
+        "Organisation du pilulier",
+        "Coordination avec la pharmacie",
+        "Rappels de médication"
       ]
     }
   ];
 
   const domesticServices = [
     {
-      category: "Entretien Intérieur",
+      category: "Services Essentiels",
       services: [
-        "Lessive et repassage",
-        "Rangement et organisation",
-        "Changement de literie",
-        "Entretien des appareils ménagers",
-        "Nettoyage en profondeur périodique",
-        "Maintenance préventive"
+        "Gestion des finances et budget",
+        "Préparation des repas quotidiens",
+        "Entretien ménager régulier",
+        "Organisation du transport",
+        "Communication et correspondance",
+        "Suivi des médicaments"
       ]
     },
     {
-      category: "Services Complémentaires",
+      category: "Accompagnement Personnalisé",
       services: [
-        "Courses d'épicerie",
-        "Achat de produits ménagers",
-        "Accompagnement aux rendez-vous",
-        "Gestion des tâches administratives",
-        "Organisation des documents",
-        "Support pour les démarches"
+        "Assistance aux rendez-vous",
+        "Support administratif",
+        "Gestion des documents importants",
+        "Coordination des services",
+        "Planification des activités",
+        "Soutien à l'autonomie"
       ]
     }
   ];
 
   const benefits = [
     {
-      title: "Maison Impeccable",
-      description: "Un environnement propre et bien entretenu pour votre confort"
+      title: "Autonomie Préservée",
+      description: "Maintien de votre indépendance dans les activités quotidiennes"
     },
     {
-      title: "Gain de Temps",
-      description: "Libérez-vous des tâches ménagères pour vos activités préférées"
+      title: "Support Personnalisé",
+      description: "Accompagnement adapté à vos besoins spécifiques"
     },
     {
-      title: "Sécurité Renforcée",
-      description: "Environnement propre et sécuritaire pour prévenir les accidents"
+      title: "Tranquillité d'Esprit",
+      description: "Gestion simplifiée de vos activités domestiques"
     },
     {
-      title: "Bien-être Optimal",
-      description: "Un intérieur sain et agréable pour votre qualité de vie"
+      title: "Qualité de Vie",
+      description: "Maintien de votre mode de vie et de votre bien-être"
     }
   ];
 
@@ -146,14 +185,14 @@ export default function EntretienMenagerPage() {
                   </div>
                   <div>
                     <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                      Entretien
-                      <span className="text-emerald-400 block">Ménager</span>
+                      Activités de la vie
+                      <span className="text-emerald-400 block">Domestique (AVD)</span>
                     </h1>
-                    <p className="text-lg text-emerald-200 font-medium mt-2">Votre maison, notre expertise</p>
+                    <p className="text-lg text-emerald-200 font-medium mt-2">Support quotidien pour votre autonomie</p>
                   </div>
                 </div>
                 <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                  Des services complets d&apos;entretien ménager pour maintenir votre intérieur impeccable et votre bien-être au quotidien.
+                  Un accompagnement complet pour vous aider dans les activités de la vie quotidienne et maintenir votre indépendance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 mb-8">
                   {/* <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl text-center border border-white/20 flex items-center justify-center h-16">
@@ -172,35 +211,35 @@ export default function EntretienMenagerPage() {
               
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Services Disponibles</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Services AVD Disponibles</h3>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
                         <Sparkles className="h-8 w-8 text-emerald-700" />
                       </div>
-                      <div className="font-semibold text-gray-900">Nettoyage</div>
-                      <div className="text-sm text-gray-600">complet</div>
+                      <div className="font-semibold text-gray-900">Gestion</div>
+                      <div className="text-sm text-gray-600">financière</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
                         <ChefHat className="h-8 w-8 text-emerald-700" />
                       </div>
-                      <div className="font-semibold text-gray-900">Préparation</div>
-                      <div className="text-sm text-gray-600">de repas</div>
+                      <div className="font-semibold text-gray-900">Courses</div>
+                      <div className="text-sm text-gray-600">et repas</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-cyan-100 to-emerald-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
-                        <Wrench className="h-8 w-8 text-emerald-700" />
+                        <Phone className="h-8 w-8 text-emerald-700" />
                       </div>
-                      <div className="font-semibold text-gray-900">Entretien</div>
-                      <div className="text-sm text-gray-600">préventif</div>
+                      <div className="font-semibold text-gray-900">Communication</div>
+                      <div className="text-sm text-gray-600">et gestion</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-emerald-100 to-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
-                        <Leaf className="h-8 w-8 text-emerald-700" />
+                        <Shield className="h-8 w-8 text-emerald-700" />
                       </div>
-                      <div className="font-semibold text-gray-900">Extérieur</div>
-                      <div className="text-sm text-gray-600">et jardin</div>
+                      <div className="font-semibold text-gray-900">Médicaments</div>
+                      <div className="text-sm text-gray-600">et suivi</div>
                     </div>
 
                   </div>
@@ -208,11 +247,11 @@ export default function EntretienMenagerPage() {
                     <div className="flex justify-center gap-4 text-sm text-gray-600">
                       <span className="flex items-center bg-gradient-to-r from-emerald-50 to-teal-50 px-3 py-1 rounded-full">
                         <Clock className="h-4 w-4 mr-1 text-emerald-600" />
-                        Horaires flexibles
+                        Service régulier
                       </span>
                       <span className="flex items-center bg-gradient-to-r from-teal-50 to-cyan-50 px-3 py-1 rounded-full">
                         <Shield className="h-4 w-4 mr-1 text-emerald-600" />
-                        Personnel fiable
+                        Support adapté
                       </span>
                     </div>
                   </div>
@@ -229,10 +268,10 @@ export default function EntretienMenagerPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Services d&apos;Entretien Complets
+                Services d&apos;aide à la vie domestique
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Des solutions d&apos;entretien ménager professionnelles pour maintenir votre intérieur impeccable.
+                Un accompagnement complet pour maintenir votre autonomie dans les activités quotidiennes.
               </p>
             </div>
 
@@ -281,8 +320,8 @@ export default function EntretienMenagerPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Nettoyage Professionnel</h3>
-                  <p className="text-emerald-100 text-sm">Des équipements et produits de qualité</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Gestion quotidienne</h3>
+                  <p className="text-emerald-100 text-sm">Support pour les tâches administratives et financières</p>
                 </div>
               </div>
 
@@ -290,14 +329,14 @@ export default function EntretienMenagerPage() {
               <div className="relative h-[400px] rounded-3xl overflow-hidden group">
                 <Image
                   src="/services/aide-a-la-marche-senior.jpg"
-                  alt="Organisation et rangement"
+                  alt="Assistance au quotidien"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Organisation & Rangement</h3>
-                  <p className="text-emerald-100 text-sm">Des espaces optimisés et fonctionnels</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Accompagnement quotidien</h3>
+                  <p className="text-emerald-100 text-sm">Aide pour toutes les activités domestiques</p>
                 </div>
               </div>
 
@@ -305,14 +344,14 @@ export default function EntretienMenagerPage() {
               <div className="relative h-[400px] rounded-3xl overflow-hidden group">
                 <Image
                   src="/services/caregiver-help-and-care-asian-senior-or-elderly-old-lady-woman-patient-sitting-on-wheelchair-at-home-photo.jpg"
-                  alt="Entretien spécialisé"
+                  alt="Support médical"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Entretien Spécialisé</h3>
-                  <p className="text-emerald-100 text-sm">Pour tous types de surfaces</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Suivi médical</h3>
+                  <p className="text-emerald-100 text-sm">Gestion des médicaments et ordonnances</p>
                 </div>
               </div>
             </div>
@@ -357,10 +396,10 @@ export default function EntretienMenagerPage() {
               <div>
                 <div className="mb-12">
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    Avantages de Nos Services
+                    Les Avantages des Services AVD
                   </h2>
                   <p className="text-xl text-gray-600">
-                    Découvrez pourquoi choisir nos services d&apos;entretien ménager professionnels.
+                    Découvrez comment nos services AVD peuvent améliorer votre quotidien et maintenir votre autonomie.
                   </p>
                 </div>
 
@@ -401,10 +440,10 @@ export default function EntretienMenagerPage() {
         <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Prêt pour un intérieur impeccable ?
+              Besoin d'aide pour vos activités quotidiennes ?
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Contactez-nous pour un devis personnalisé et découvrez comment nos services d&apos;entretien ménager peuvent transformer votre quotidien.
+              Contactez-nous pour une évaluation personnalisée de vos besoins en services AVD et découvrez comment nous pouvons vous aider à maintenir votre autonomie.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
@@ -437,7 +476,7 @@ export default function EntretienMenagerPage() {
         isOpen={isModalOpen} 
         onClose={closeModal} 
         formType="service"
-        serviceName="Entretien Ménager"
+        serviceName="AVD"
       />
       <Footer />
     </div>

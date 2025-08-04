@@ -37,13 +37,13 @@ const Header = () => {
       label: "Services",
       hasDropdown: true,
       dropdownItems: [
-        { href: "/services/soins-personnalises", label: "Soins personnalisés" },
-        { href: "/services/entretien-menager", label: "Entretien ménager" },
-        { href: "/services/soins-specialises", label: "Soins Spécialisés" }
+        { href: "/services/avq", label: "Activités de la vie quotidienne (AVQ)" },
+        { href: "/services/avd", label: "Activités de la vie domestique (AVD)" },
+        { href: "/services/soins-specialises", label: "Soins spécialisés" }
       ]
     },
     { href: "/#careers", label: "Carrières" },
-    { href: "/cognitif", label: "Blog" },
+    { href: "/blogue", label: "Blogue" },
     { href: "/#contact", label: "Contact" },
   ];
 
