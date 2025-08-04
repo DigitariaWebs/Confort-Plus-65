@@ -5,7 +5,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import CognitiveSection from "@/components/sections/CognitiveSection";
 import HeroSection from "@/components/sections/HeroSection";
 import JobOpportunitySection from "@/components/sections/JobOpertunitySection";
-import ServicesSection from "@/components/sections/ServicesSection";
+// import ServicesSection from "@/components/sections/ServicesSection";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <JobOpportunitySection />
       <CognitiveSection />
       <ContactSection />
