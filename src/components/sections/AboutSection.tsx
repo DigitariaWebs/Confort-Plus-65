@@ -95,7 +95,7 @@ const AboutSection = () => (
           {
             icon: <Heart className="h-8 w-8 text-emerald-600" />,
             title: "Soins Personnalisés",
-            content: "Des services adaptés qui respectent les besoins, valeurs et dignité de chaque senior.",
+            content: "Des services adaptés qui respectent les besoins, valeurs et dignité de chaque personne âgée.",
             badge: "Approche Sur Mesure"
           },
           {
@@ -137,7 +137,7 @@ const AboutSection = () => (
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Notre Engagement</h3>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg mb-6">
           Nous croyons que des soins de qualité vont au-delà de la simple satisfaction des besoins de base. Notre équipe est dédiée à
-          fournir un soutien complet qui améliore le bien-être général et le bonheur de chaque senior que nous servons.
+          fournir un soutien complet qui améliore le bien-être général et le bonheur de chaque personne âgée que nous servons.
         </p>
         <p className="font-semibold">Fait confiance par des familles à travers la communauté</p>
       </div>
