@@ -2,7 +2,7 @@
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { Users, Heart, CheckCircle, Phone, Contact, Activity, Brain, Music, FileText } from "lucide-react";
+import { Users, CheckCircle, Phone, Contact, Activity, Brain, Music, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
