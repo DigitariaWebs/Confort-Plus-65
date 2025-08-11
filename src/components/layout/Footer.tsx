@@ -17,7 +17,7 @@ const Footer = () => (
             <span className="text-2xl font-bold">Confort Plus 65</span>
           </div>
           <p className="text-gray-400 mb-4">
-            Soins et services pour personnes âgées de 65 ans&+
+            Services d’aide pour les personnes âgées de 65 ans et plus
           </p>
           <div className="flex space-x-4">
             <div className="flex items-center space-x-2 text-gray-400">

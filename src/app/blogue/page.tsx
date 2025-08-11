@@ -22,7 +22,7 @@ export default function BlogPage() {
                 Votre choix c&apos;est de rester dans le{" "}
                 <span className="text-emerald-600">confort de votre foyer</span>?
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              <p className="text-3xl lg:text-4xl text-gray-600 max-w-3xl mx-auto mb-8">
                 On peut vous aider!
               </p>
               <div className="text-2xl font-semibold text-emerald-700 mb-8">

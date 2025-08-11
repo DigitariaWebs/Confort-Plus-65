@@ -218,28 +218,28 @@ export default function AVDPage() {
                         <Sparkles className="h-8 w-8 text-emerald-700" />
                       </div>
                       <div className="font-semibold text-gray-900">Gestion</div>
-                      <div className="text-sm text-gray-600">financière</div>
+                      <div className="text-sm text-gray-900 font-semibold">financière</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
                         <ChefHat className="h-8 w-8 text-emerald-700" />
                       </div>
                       <div className="font-semibold text-gray-900">Courses</div>
-                      <div className="text-sm text-gray-600">et repas</div>
+                      <div className="text-sm text-gray-900 font-semibold">et repas</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-cyan-100 to-emerald-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
                         <Phone className="h-8 w-8 text-emerald-700" />
                       </div>
                       <div className="font-semibold text-gray-900">Communication</div>
-                      <div className="text-sm text-gray-600">et gestion</div>
+                      <div className="text-sm text-gray-900 font-semibold">et gestion</div>
                     </div>
                     <div className="text-center">
                       <div className="bg-gradient-to-br from-emerald-100 to-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
                         <Shield className="h-8 w-8 text-emerald-700" />
                       </div>
                       <div className="font-semibold text-gray-900">Médicaments</div>
-                      <div className="text-sm text-gray-600">et suivi</div>
+                      <div className="text-sm text-gray-900 font-semibold">et suivi</div>
                     </div>
 
                   </div>

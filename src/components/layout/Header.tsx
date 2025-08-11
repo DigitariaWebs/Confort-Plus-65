@@ -94,7 +94,7 @@ const Header = () => {
               height={32} 
               className="h-8 w-8 sm:h-10 sm:w-10 md:h-11 md:w-11"
             />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-gray-900">
               <span className="hidden sm:inline">Confort Plus 65</span>
               <span className="sm:hidden flex flex-col leading-tight">
                 <span>Confort</span>
@@ -141,7 +141,7 @@ const Header = () => {
                             <Link
                               key={dropdownItem.href}
                               href={dropdownItem.href}
-                              className="block px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors text-sm"
+                              className={`block px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors text-sm ${dropdownItem.label === 'Blogue' ? 'text-base font-medium' : ''}`}
                             >
                               {dropdownItem.label}
                             </Link>

@@ -104,18 +104,7 @@ export default function SpecializedCarePage() {
         "Prévention des complications"
       ]
     },
-    {
-      title: "Soins Palliatifs à Domicile",
-      description: "Accompagnement en fin de vie avec dignité et confort",
-      features: [
-        "Soins de confort et bien-être",
-        "Gestion de la douleur",
-        "Support émotionnel",
-        "Accompagnement de la famille",
-        "Respect des volontés du patient",
-        "Disponibilité 24h/24 si nécessaire"
-      ]
-    }
+    
   ];
 
   const qualifications = [
@@ -213,13 +202,7 @@ export default function SpecializedCarePage() {
                 <h3 className="font-bold text-gray-900 mb-2">Thérapies Créatives</h3>
                 <p className="text-gray-600 text-sm">Art et musique</p>
               </div>
-              <div className="bg-gradient-to-br from-white to-emerald-50 backdrop-blur-sm rounded-2xl p-6 text-center border border-emerald-100 shadow-md">
-                <div className="bg-gradient-to-br from-emerald-100 to-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-md">
-                  <Heart className="h-8 w-8 text-emerald-700" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Soins Palliatifs</h3>
-                <p className="text-gray-600 text-sm">Accompagnement</p>
-              </div>
+              
             </div>
 
             {/* Pricing Card */}

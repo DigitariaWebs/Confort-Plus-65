@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-      title: 'Soins et services pour personnes âgées de 65 ans&+',
+      title: "Services d’aide pour les personnes âgées de 65 ans et plus",
     description: "Confort Plus 65 offre des services de soins de qualité à domicile dans la grande région de Montréal. Soins personnalisés, aide à domicile et accompagnement pour les personnes âgées de 65 ans et plus.",
   keywords: "soins à domicile, aide aux personnes âgées, services pour seniors, soins personnalisés, Montréal, aide domestique, accompagnement personnes âgées",
       authors: [{ name: "Confort Plus 65" }],
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://confortplus65.com",
-    title: "Soins et services pour personnes âgées de 65 ans&+",
-    description: "Services de soins à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
+    title: "Services d’aide pour les personnes âgées de 65 ans et plus",
+    description: "Services d’aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
     siteName: "Confort Plus 65",
     images: [{
       url: "/Logo.svg",
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soins et services pour personnes âgées de 65 ans&+",
-    description: "Services de soins à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
+    title: "Services d’aide pour les personnes âgées de 65 ans et plus",
+    description: "Services d’aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
     images: ["/Logo.svg"],
   },
   icons: {

@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { Clock, Shield, CheckCircle, Phone, Contact, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useState } from "react";
 import FormModal from "@/components/models/ContactModel";
@@ -107,74 +108,96 @@ export default function AVQPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="pt-20">
-        {/* Hero Section - Personalized Care Focused */}
-        <section className="relative bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 py-20 overflow-hidden">
-          {/* Background Image */}
+        {/* Hero Section - Match AVD model */}
+        <section className="relative min-h-[600px] flex items-center">
+          {/* Background Image with Overlay */}
           <div className="absolute inset-0">
             <Image
               src="/services/soins-personnalises.jpg"
-              alt="Soins personnalisés pour personnes âgées"
+              alt="Soins personnalisés AVQ"
               fill
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 to-emerald-900/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 to-emerald-900/60"></div>
           </div>
-          
-          {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-10 left-10 w-20 h-20 bg-emerald-200 rounded-full opacity-30"></div>
-            <div className="absolute top-32 right-20 w-16 h-16 bg-teal-200 rounded-full opacity-40"></div>
-            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-200 rounded-full opacity-30"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
-                <Star className="h-16 w-16 text-emerald-400" />
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-                Activités de la vie
-                <span className="text-emerald-400 block">Quotidienne (AVQ)</span>
-              </h1>
-              <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
-                Assistance professionnelle pour les activités essentielles de votre quotidien, dans le respect de votre autonomie
-              </p>
-            </div>
 
-            {/* Pricing Card */}
-            <div className="max-w-md mx-auto mb-12">
-              <div className="bg-white rounded-3xl shadow-2xl p-8 border-2 border-emerald-100">
-                <div className="text-center">
-                  {/* <div className="text-5xl font-bold text-emerald-600 mb-8">13,99 $/h</div> */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center mb-8">
+                  <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl mr-6 shadow-lg border border-white/20">
+                    <Star className="h-12 w-12 text-white" />
+                  </div>
+                  <div>
+                    <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+                      Activités de la vie
+                      <span className="text-emerald-400 block">Quotidienne (AVQ)</span>
+                    </h1>
+                    <p className="text-lg text-emerald-200 font-medium mt-2">Soutien essentiel pour votre autonomie</p>
+                  </div>
+                </div>
+                <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+                  Un accompagnement professionnel pour vous aider dans les activités essentielles de la vie quotidienne.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 mb-8">
                   <Button 
                     size="lg" 
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg h-16 rounded-2xl cursor-pointer"
+                    className="bg-emerald-500 hover:bg-emerald-600 text-lg h-16 px-8 rounded-2xl shadow-lg cursor-pointer"
                     onClick={openModal}
                   >
                     <Contact className="h-6 w-6 mr-3" />
-                    Consultation personnalisée
+                    Demander un devis
                   </Button>
                 </div>
               </div>
-            </div>
 
-            {/* Features Grid */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-6">
-                <Clock className="h-12 w-12 mx-auto mb-4 text-emerald-600" />
-                <h3 className="font-bold text-gray-900 mb-2">Horaires Flexibles</h3>
-                <p className="text-gray-600">Adaptés à vos besoins</p>
-              </div>
-              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-6">
-                <Shield className="h-12 w-12 mx-auto mb-4 text-emerald-600" />
-                <h3 className="font-bold text-gray-900 mb-2">Personnel Expert</h3>
-                <p className="text-gray-600">Formation spécialisée</p>
-              </div>
-              <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-6">
-                <Sparkles className="h-12 w-12 mx-auto mb-4 text-emerald-600" />
-                <h3 className="font-bold text-gray-900 mb-2">Service Premium</h3>
-                <p className="text-gray-600">Qualité exceptionnelle</p>
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Services AVQ Disponibles</h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="text-center">
+                      <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
+                        <Sparkles className="h-8 w-8 text-emerald-700" />
+                      </div>
+                      <div className="font-semibold text-gray-900">Hygiène</div>
+                      <div className="text-sm text-gray-900 font-semibold">bain/douche</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
+                        <Star className="h-8 w-8 text-emerald-700" />
+                      </div>
+                      <div className="font-semibold text-gray-900">Habillement</div>
+                      <div className="text-sm text-gray-900 font-semibold">quotidien</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-gradient-to-br from-cyan-100 to-emerald-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
+                        <Phone className="h-8 w-8 text-emerald-700" />
+                      </div>
+                      <div className="font-semibold text-gray-900">Alimentation</div>
+                      <div className="text-sm text-gray-900 font-semibold">assistance</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-gradient-to-br from-emerald-100 to-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 shadow-md">
+                        <Clock className="h-8 w-8 text-emerald-700" />
+                      </div>
+                      <div className="font-semibold text-gray-900">Mobilité</div>
+                      <div className="text-sm text-gray-900 font-semibold">et transferts</div>
+                    </div>
+                  </div>
+                  <div className="mt-6 text-center">
+                    <div className="flex justify-center gap-4 text-sm text-gray-600">
+                      <span className="flex items-center bg-gradient-to-r from-emerald-50 to-teal-50 px-3 py-1 rounded-full">
+                        <Shield className="h-4 w-4 mr-1 text-emerald-600" />
+                        Support sécurisé
+                      </span>
+                      <span className="flex items-center bg-gradient-to-r from-teal-50 to-cyan-50 px-3 py-1 rounded-full">
+                        <Sparkles className="h-4 w-4 mr-1 text-emerald-600" />
+                        Service de qualité
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -182,41 +205,41 @@ export default function AVQPage() {
 
 
 
-        {/* Services Details - Card Layout */}
-        <section className="py-20 bg-white">
+        {/* Services with Color-coded Layout (match AVD) */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Nos Services AVQ
+                Services d'aide à la vie quotidienne
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Une assistance professionnelle et bienveillante pour toutes les activités essentielles de votre vie quotidienne.
+                Un accompagnement complet pour maintenir votre autonomie dans les activités essentielles.
               </p>
             </div>
 
-            <div className="grid gap-8">
+            <div className="grid lg:grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <div key={index} className={`${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex flex-col lg:flex gap-8 items-center bg-gradient-to-r ${index % 2 === 0 ? 'from-emerald-50 to-teal-50' : 'from-teal-50 to-cyan-50'} rounded-3xl p-8 lg:p-12`}>
-                  <div className="lg:w-1/2">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-2xl mb-6">
-                      <Star className="h-8 w-8 text-emerald-600" />
+                <Card key={index} className="border-2 border-emerald-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-white to-emerald-50 overflow-hidden">
+                  <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 pb-6">
+                    <div className="flex items-center mb-4">
+                      <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-3 rounded-2xl mr-4 shadow-md">
+                        <Sparkles className="h-8 w-8 text-emerald-700" />
+                      </div>
+                      <CardTitle className="text-emerald-800 text-2xl">{service.title}</CardTitle>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                    <p className="text-lg text-gray-600 mb-6">{service.description}</p>
-                  </div>
-                  <div className="lg:w-1/2">
-                    <div className="bg-white rounded-2xl p-6 shadow-lg">
-                      <ul className="space-y-4">
-                        {service.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-start">
-                            <CheckCircle className="h-6 w-6 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700 text-lg">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                    <p className="text-gray-700 text-lg">{service.description}</p>
+                  </CardHeader>
+                  <CardContent className="pt-6">
+                    <ul className="space-y-4">
+                      {service.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="flex items-start">
+                          <CheckCircle className="h-6 w-6 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-700 text-lg">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>

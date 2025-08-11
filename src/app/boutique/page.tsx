@@ -203,8 +203,7 @@ export default function BoutiquePage() {
               <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Boutique</span> Confort Plus 65
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-              Découvrez notre sélection de produits spécialement choisis pour améliorer la qualité de vie, 
-              la sécurité et le bien-être des personnes âgées de 65 ans et plus.
+              Découvrez nos services et notre sélection des produits spécialement choisis pour améliorer la qualité de vie, la sécurité et le bien-être des personnes âgées de 65 ans et plus.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

@@ -50,7 +50,7 @@ const AboutSection = () => (
       {/* Competitive Advantage Section */}
       <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-12 mb-16 shadow-xl">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Un Avantage Concurrentiel Unique</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Avantages concurrentiels</h3>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 shadow-xl border border-emerald-100">
