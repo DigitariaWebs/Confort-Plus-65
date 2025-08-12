@@ -88,7 +88,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
             <Image 
-              src="/Logo.svg" 
+              src="/Logo.png" 
               alt="Confort Plus 65 Logo" 
               width={32} 
               height={32} 

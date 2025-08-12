@@ -8,7 +8,7 @@ const Footer = () => (
         <div className="col-span-2">
           <div className="flex items-center space-x-2 mb-4">
             <Image 
-              src="/Logo.svg" 
+              src="/Logo.png" 
               alt="Confort Plus 65 Logo" 
               width={32} 
               height={32} 

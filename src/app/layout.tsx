@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "Services d’aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
     siteName: "Confort Plus 65",
     images: [{
-      url: "/Logo.svg",
+      url: "/Logo.png",
       width: 800,
       height: 600,
       alt: "Confort Plus 65 Logo"
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Services d’aide pour les personnes âgées de 65 ans et plus",
     description: "Services d’aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
-    images: ["/Logo.svg"],
+    images: ["/Logo.png"],
   },
   icons: {
     icon: "/icon.svg",
