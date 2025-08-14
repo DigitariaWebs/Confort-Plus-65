@@ -10,9 +10,10 @@ const Footer = () => (
             <Image 
               src="/Logo.png" 
               alt="Confort Plus 65 Logo" 
-              width={32} 
-              height={32} 
-              className="h-10 w-10"
+              width={100} 
+              height={100} 
+              quality={100}
+              className="h-14 w-14 object-contain"
             />
             <span className="text-2xl font-bold">Confort Plus 65</span>
           </div>
