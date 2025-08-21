@@ -20,31 +20,47 @@ export default function BlogPage() {
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Votre choix c&apos;est de rester dans le{" "}
-                <span className="text-emerald-600">confort de votre foyer</span>?
+                <span className="text-emerald-600">confort de votre foyer</span>
+                ?
               </h1>
               <p className="text-3xl lg:text-4xl text-gray-600 max-w-3xl mx-auto mb-8">
                 On peut vous aider!
               </p>
               <div className="text-2xl font-semibold text-emerald-700 mb-8">
-                Confort Plus 65 des soins qui font la différence, une présence qui compte.
+                Confort Plus 65 des soins qui font la différence, une présence
+                qui compte.
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
-                <div className="text-emerald-600 font-semibold mb-2">La personne âgée</div>
-                <p className="text-gray-600">Ses besoins, ses valeurs, son confort, le respect de sa dignité</p>
+                <div className="text-emerald-600 font-semibold mb-2">
+                  La personne âgée
+                </div>
+                <p className="text-gray-600">
+                  Ses besoins, ses valeurs, son confort, le respect de sa dignité, C'est notre priorité
+                </p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
-                <div className="text-emerald-600 font-semibold mb-2">Des soins et services</div>
-                <p className="text-gray-600">De qualité et adaptés aux besoins spécifiques</p>
+                <div className="text-emerald-600 font-semibold mb-2">
+                  Des soins et services
+                </div>
+                <p className="text-gray-600">
+                  De qualité et adaptés aux besoins spécifiques
+                </p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
-                <div className="text-emerald-600 font-semibold mb-2">Accessibilité</div>
-                <p className="text-gray-600">Services accessibles et abordables</p>
+                <div className="text-emerald-600 font-semibold mb-2">
+                  Accessibilité
+                </div>
+                <p className="text-gray-600">
+                  Services accessibles et abordables
+                </p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
-                <div className="text-emerald-600 font-semibold mb-2">À domicile</div>
+                <div className="text-emerald-600 font-semibold mb-2">
+                  À domicile
+                </div>
                 <p className="text-gray-600">Dans le confort de votre foyer</p>
               </div>
             </div>
@@ -63,15 +79,19 @@ export default function BlogPage() {
                   </h2>
                   <div className="prose prose-emerald max-w-none">
                     <p className="text-gray-600 leading-relaxed">
-                      Le terme cognitif renvoie à l&apos;ensemble des processus psychiques liés à l&apos;esprit. 
-                      Ainsi le langage, la mémoire, le raisonnement, la coordination des mouvements (praxies), 
-                      les reconnaissances (gnosies), les fonctions exécutives regroupant le raisonnement, 
-                      le jugement, la planification, l&apos;organisation et les fonctions de perception sont des 
-                      fonctions cognitives. Ce sont des fonctions orchestrées par le cerveau.
+                      Le terme cognitif renvoie à l&apos;ensemble des processus
+                      psychiques liés à l&apos;esprit. Ainsi le langage, la
+                      mémoire, le raisonnement, la coordination des mouvements
+                      (praxies), les reconnaissances (gnosies), les fonctions
+                      exécutives regroupant le raisonnement, le jugement, la
+                      planification, l&apos;organisation et les fonctions de
+                      perception sont des fonctions cognitives. Ce sont des
+                      fonctions orchestrées par le cerveau.
                     </p>
                     <p className="text-gray-600 mt-4">
-                      Dans certaines pathologies liées au vieillissement (Alzheimer, Parkinson, démence...) 
-                      les fonctions cognitives sont progressivement altérées.
+                      Dans certaines pathologies liées au vieillissement
+                      (Alzheimer, Parkinson, démence...) les fonctions
+                      cognitives sont progressivement altérées.
                     </p>
                   </div>
                 </div>
@@ -82,29 +102,41 @@ export default function BlogPage() {
                   </h3>
                   <div className="bg-emerald-50 rounded-3xl p-8 mb-8">
                     <p className="text-gray-700 mb-6">
-                      Si votre proche souffre de troubles cognitifs la communication avec lui ne peut pas 
-                      s&apos;établir de la même façon qu&apos;avant, il faut savoir que malgré ses problèmes cognitifs :
+                      Si votre proche souffre de troubles cognitifs la
+                      communication avec lui ne peut pas s&apos;établir de la
+                      même façon qu&apos;avant, il faut savoir que malgré ses
+                      problèmes cognitifs :
                     </p>
                     <ul className="space-y-4">
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche possède une mémoire affective, il peut se souvenir de l&apos;émotion 
-                        vécue sans se souvenir de l&apos;événement ayant provoqué cette émotion.</span>
+                        <span>
+                          Votre proche possède une mémoire affective, il peut se
+                          souvenir de l&apos;émotion vécue sans se souvenir de
+                          l&apos;événement ayant provoqué cette émotion.
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche ressent votre état émotif et peut percevoir votre anxiété, 
-                        agitation, stress, tristesse, mais aussi votre bonne humeur et votre joie.</span>
+                        <span>
+                          Votre proche ressent votre état émotif et peut
+                          percevoir votre anxiété, agitation, stress, tristesse,
+                          mais aussi votre bonne humeur et votre joie.
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche désire communiquer même s&apos;il en est incapable de la même façon 
-                        qu&apos;avant.</span>
+                        <span>
+                          Votre proche désire communiquer même s&apos;il en est
+                          incapable de la même façon qu&apos;avant.
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-6 w-6 text-emerald-600 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Votre proche est un adulte. Il est plus respectueux de ne pas s&apos;adresser 
-                        à lui comme à un enfant.</span>
+                        <span>
+                          Votre proche est un adulte. Il est plus respectueux de
+                          ne pas s&apos;adresser à lui comme à un enfant.
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -119,28 +151,56 @@ export default function BlogPage() {
                   </h3>
                   <div className="space-y-6">
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">1. Établir une relation de confiance</h4>
-                      <p className="text-gray-600">Maintenir une relation chaleureuse inspirant la confiance.</p>
+                      <h4 className="font-semibold text-emerald-700 mb-2">
+                        1. Établir une relation de confiance
+                      </h4>
+                      <p className="text-gray-600">
+                        Maintenir une relation chaleureuse inspirant la
+                        confiance.
+                      </p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">2. Comprendre les effets de la maladie</h4>
-                      <p className="text-gray-600">Accepter la perte progressive des notions et des repères.</p>
+                      <h4 className="font-semibold text-emerald-700 mb-2">
+                        2. Comprendre les effets de la maladie
+                      </h4>
+                      <p className="text-gray-600">
+                        Accepter la perte progressive des notions et des
+                        repères.
+                      </p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">3. Interpréter les comportements</h4>
-                      <p className="text-gray-600">Comprendre que les comportements traduisent des émotions et des besoins.</p>
+                      <h4 className="font-semibold text-emerald-700 mb-2">
+                        3. Interpréter les comportements
+                      </h4>
+                      <p className="text-gray-600">
+                        Comprendre que les comportements traduisent des émotions
+                        et des besoins.
+                      </p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">4. Maintenir la cohérence</h4>
-                      <p className="text-gray-600">Établir des routines et maintenir un environnement stable.</p>
+                      <h4 className="font-semibold text-emerald-700 mb-2">
+                        4. Maintenir la cohérence
+                      </h4>
+                      <p className="text-gray-600">
+                        Établir des routines et maintenir un environnement
+                        stable.
+                      </p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">5. Adapter les attentes</h4>
-                      <p className="text-gray-600">Ajuster les attentes aux capacités actuelles.</p>
+                      <h4 className="font-semibold text-emerald-700 mb-2">
+                        5. Adapter les attentes
+                      </h4>
+                      <p className="text-gray-600">
+                        Ajuster les attentes aux capacités actuelles.
+                      </p>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-md">
-                      <h4 className="font-semibold text-emerald-700 mb-2">6. Encourager l&apos;autonomie</h4>
-                      <p className="text-gray-600">Permettre de maintenir les activités encore possibles.</p>
+                      <h4 className="font-semibold text-emerald-700 mb-2">
+                        6. Encourager l&apos;autonomie
+                      </h4>
+                      <p className="text-gray-600">
+                        Permettre de maintenir les activités encore possibles.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -158,10 +218,11 @@ export default function BlogPage() {
                 Numéros utiles
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Des ressources importantes à portée de main pour votre sécurité et votre bien-être
+                Des ressources importantes à portée de main pour votre sécurité
+                et votre bien-être
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-red-100 hover:border-red-200">
                 <div className="flex items-center mb-4">
@@ -170,8 +231,13 @@ export default function BlogPage() {
                   </div>
                   <h3 className="font-bold text-gray-900 ml-3">Urgence</h3>
                 </div>
-                <a href="tel:911" className="flex items-center justify-between group">
-                  <span className="text-2xl font-bold text-red-600 group-hover:text-red-700 transition-colors">911</span>
+                <a
+                  href="tel:911"
+                  className="flex items-center justify-between group"
+                >
+                  <span className="text-2xl font-bold text-red-600 group-hover:text-red-700 transition-colors">
+                    911
+                  </span>
                   <Phone className="h-5 w-5 text-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </div>
@@ -183,8 +249,13 @@ export default function BlogPage() {
                   </div>
                   <h3 className="font-bold text-gray-900 ml-3">Info-santé</h3>
                 </div>
-                <a href="tel:811" className="flex items-center justify-between group">
-                  <span className="text-2xl font-bold text-emerald-600 group-hover:text-emerald-700 transition-colors">811</span>
+                <a
+                  href="tel:811"
+                  className="flex items-center justify-between group"
+                >
+                  <span className="text-2xl font-bold text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                    811
+                  </span>
                   <Phone className="h-5 w-5 text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </div>
@@ -194,15 +265,27 @@ export default function BlogPage() {
                   <div className="bg-blue-100 p-2 rounded-lg">
                     <Info className="h-5 w-5 text-blue-600" />
                   </div>
-                  <h3 className="font-bold text-gray-900 ml-3">Régie du rente</h3>
+                  <h3 className="font-bold text-gray-900 ml-3">
+                    Régie du rente
+                  </h3>
                 </div>
                 <div className="space-y-1">
-                  <a href="tel:5148732433" className="flex items-center justify-between group">
-                    <span className="text-lg font-bold text-blue-600 group-hover:text-blue-700 transition-colors">514 873-2433</span>
+                  <a
+                    href="tel:5148732433"
+                    className="flex items-center justify-between group"
+                  >
+                    <span className="text-lg font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+                      514 873-2433
+                    </span>
                     <Phone className="h-5 w-5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
-                  <a href="tel:18004635185" className="flex items-center justify-between group">
-                    <span className="text-lg font-bold text-blue-600 group-hover:text-blue-700 transition-colors">1 800 463-5185</span>
+                  <a
+                    href="tel:18004635185"
+                    className="flex items-center justify-between group"
+                  >
+                    <span className="text-lg font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+                      1 800 463-5185
+                    </span>
                     <Phone className="h-5 w-5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </div>
@@ -213,10 +296,17 @@ export default function BlogPage() {
                   <div className="bg-purple-100 p-2 rounded-lg">
                     <AlertCircle className="h-5 w-5 text-purple-600" />
                   </div>
-                  <h3 className="font-bold text-gray-900 ml-3">Centre antipoison</h3>
+                  <h3 className="font-bold text-gray-900 ml-3">
+                    Centre antipoison
+                  </h3>
                 </div>
-                <a href="tel:18004635060" className="flex items-center justify-between group">
-                  <span className="text-lg font-bold text-purple-600 group-hover:text-purple-700 transition-colors">1 800 463-5060</span>
+                <a
+                  href="tel:18004635060"
+                  className="flex items-center justify-between group"
+                >
+                  <span className="text-lg font-bold text-purple-600 group-hover:text-purple-700 transition-colors">
+                    1 800 463-5060
+                  </span>
                   <Phone className="h-5 w-5 text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </div>
@@ -226,14 +316,24 @@ export default function BlogPage() {
                   <div className="bg-orange-100 p-2 rounded-lg">
                     <AlertCircle className="h-5 w-5 text-orange-600" />
                   </div>
-                  <h3 className="font-bold text-gray-900 ml-3">Ligne aide abus aînées</h3>
+                  <h3 className="font-bold text-gray-900 ml-3">
+                    Ligne aide abus aînées
+                  </h3>
                 </div>
                 <div className="space-y-2">
-                  <a href="tel:18884892287" className="flex items-center justify-between group">
-                    <span className="text-lg font-bold text-orange-600 group-hover:text-orange-700 transition-colors">1 888 489-2287</span>
+                  <a
+                    href="tel:18884892287"
+                    className="flex items-center justify-between group"
+                  >
+                    <span className="text-lg font-bold text-orange-600 group-hover:text-orange-700 transition-colors">
+                      1 888 489-2287
+                    </span>
                     <Phone className="h-5 w-5 text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
-                  <Link href="http://www.aideabusaines.ca" className="text-orange-600 text-sm hover:underline block mt-1">
+                  <Link
+                    href="http://www.aideabusaines.ca"
+                    className="text-orange-600 text-sm hover:underline block mt-1"
+                  >
                     www.aideabusaines.ca
                   </Link>
                 </div>
@@ -249,12 +349,13 @@ export default function BlogPage() {
               Besoin d&apos;aide ou de conseils ?
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Notre équipe est là pour vous accompagner et répondre à toutes vos questions.
+              Notre équipe est là pour vous accompagner et répondre à toutes vos
+              questions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary" 
+              <Button
+                size="lg"
+                variant="secondary"
                 className="text-lg px-8 py-4 rounded-2xl bg-white text-emerald-600 hover:bg-emerald-50 hover:text-black shadow-lg hover:shadow-xl transition-all duration-300"
                 asChild
               >
@@ -263,9 +364,9 @@ export default function BlogPage() {
                   Appelez maintenant
                 </a>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="text-lg px-8 py-4 rounded-2xl border-2 border-white text-white hover:bg-white hover:text-emerald-600 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Contact className="h-6 w-6 mr-3" />
