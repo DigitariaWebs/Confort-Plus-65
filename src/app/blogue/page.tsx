@@ -38,7 +38,7 @@ export default function BlogPage() {
                   La personne âgée
                 </div>
                 <p className="text-gray-600">
-                  Ses besoins, ses valeurs, son confort, le respect de sa dignité, C'est notre priorité
+                  Ses besoins, ses valeurs, son confort, le respect de sa dignité, C&apos;est notre priorité
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
