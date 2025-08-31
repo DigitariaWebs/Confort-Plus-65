@@ -5,7 +5,7 @@ export const organizationSchema = {
   "description": "Services de soins à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
   "url": "https://confortplus65.com",
   "telephone": "+15142228271",
-  "email": "contact@confortplus65.com",
+  "email": "info@confortplus65.com",
   "areaServed": {
     "@type": "City",
     "name": "Montréal"

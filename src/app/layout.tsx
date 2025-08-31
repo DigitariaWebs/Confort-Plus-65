@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { organizationSchema } from "@/lib/schema";
+import { Providers } from "@/components/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,12 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-      title: "Services d’aide pour les personnes âgées de 65 ans et plus",
-    description: "Confort Plus 65 offre des services de soins de qualité à domicile dans la grande région de Montréal. Soins personnalisés, aide à domicile et accompagnement pour les personnes âgées de 65 ans et plus.",
+  metadataBase: new URL("https://confortplus65.com"),
+  title: "Services d'aide pour les personnes âgées de 65 ans et plus",
+  description: "Confort Plus 65 offre des services de soins de qualité à domicile dans la grande région de Montréal. Soins personnalisés, aide à domicile et accompagnement pour les personnes âgées de 65 ans et plus.",
   keywords: "soins à domicile, aide aux personnes âgées, services pour seniors, soins personnalisés, Montréal, aide domestique, accompagnement personnes âgées",
-      authors: [{ name: "Confort Plus 65" }],
-    creator: "Confort Plus 65",
-    publisher: "Confort Plus 65",
+  authors: [{ name: "Confort Plus 65" }],
+  creator: "Confort Plus 65",
+  publisher: "Confort Plus 65",
   robots: "index, follow",
   alternates: {
     canonical: "https://confortplus65.com"
@@ -28,8 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://confortplus65.com",
-    title: "Services d’aide pour les personnes âgées de 65 ans et plus",
-    description: "Services d’aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
+    title: "Services d'aide pour les personnes âgées de 65 ans et plus",
+    description: "Services d'aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
     siteName: "Confort Plus 65",
     images: [{
       url: "/Logo.png",
@@ -41,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services d’aide pour les personnes âgées de 65 ans et plus",
-    description: "Services d’aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
+    title: "Services d'aide pour les personnes âgées de 65 ans et plus",
+    description: "Services d'aide à domicile personnalisés pour les personnes âgées de 65 ans et plus dans la grande région de Montréal.",
     images: ["/Logo.png"],
   },
   icons: {
@@ -50,7 +52,11 @@ export const metadata: Metadata = {
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#10b981", // emerald-600
   colorScheme: "light",
 };
@@ -66,13 +72,15 @@ export default function RootLayout({
         <Script
           id="schema-org"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

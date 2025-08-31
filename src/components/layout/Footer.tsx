@@ -7,11 +7,11 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-8">
         <div className="col-span-2">
           <div className="flex items-center space-x-2 mb-4">
-            <Image 
-              src="/Logo.png" 
-              alt="Confort Plus 65 Logo" 
-              width={100} 
-              height={100} 
+            <Image
+              src="/Logo.png"
+              alt="Confort Plus 65 Logo"
+              width={100}
+              height={100}
               quality={100}
               className="h-14 w-14 object-contain"
             />
@@ -27,7 +27,7 @@ const Footer = () => (
             </div>
             <div className="flex items-center space-x-2 text-gray-400">
               <Mail className="h-4 w-4" />
-              <span>confortplus65@gmail.com</span>
+              <span>info@confortplus65.com</span>
             </div>
           </div>
           <p className="text-gray-400 mt-4">
@@ -57,7 +57,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                    <p>&copy; 2025 Confort Plus 65. Tous droits réservés.</p>
+        <p>&copy; 2025 Confort Plus 65. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

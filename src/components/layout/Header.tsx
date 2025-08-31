@@ -1,24 +1,32 @@
 "use client";
 
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
   const [isPlusDropdownOpen, setIsPlusDropdownOpen] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
+  const { data: session, status } = useSession();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleServicesDropdown = () => setIsServicesDropdownOpen(!isServicesDropdownOpen);
-  const toggleSolutionsDropdown = () => setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
+  const toggleServicesDropdown = () =>
+    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+  const toggleSolutionsDropdown = () =>
+    setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
   const togglePlusDropdown = () => setIsPlusDropdownOpen(!isPlusDropdownOpen);
 
-  const handleMouseEnter = (dropdownType: 'services' | 'solutions' | 'plus') => {
+  const handleMouseEnter = (
+    dropdownType: "services" | "solutions" | "plus"
+  ) => {
     if (dropdownTimeout) {
       clearTimeout(dropdownTimeout);
       setDropdownTimeout(null);
@@ -27,11 +35,11 @@ const Header = () => {
     setIsServicesDropdownOpen(false);
     setIsSolutionsDropdownOpen(false);
     setIsPlusDropdownOpen(false);
-    
+
     // Open the specific dropdown
-    if (dropdownType === 'services') setIsServicesDropdownOpen(true);
-    if (dropdownType === 'solutions') setIsSolutionsDropdownOpen(true);
-    if (dropdownType === 'plus') setIsPlusDropdownOpen(true);
+    if (dropdownType === "services") setIsServicesDropdownOpen(true);
+    if (dropdownType === "solutions") setIsSolutionsDropdownOpen(true);
+    if (dropdownType === "plus") setIsPlusDropdownOpen(true);
   };
 
   const handleMouseLeave = () => {
@@ -46,38 +54,47 @@ const Header = () => {
   const menuItems = [
     { href: "/", label: "Accueil", key: "home" },
     { href: "/#about", label: "À propos", key: "about" },
-    { 
-      href: "/#services", 
+    {
+      href: "/#services",
       label: "Services",
       key: "services",
       hasDropdown: true,
       dropdownItems: [
-        { href: "/services/avq", label: "Activités de la vie quotidienne (AVQ)" },
-        { href: "/services/avd", label: "Activités de la vie domestique (AVD)" },
-        { href: "/services/soins-specialises", label: "Soins spécialisés" }
-      ]
+        {
+          href: "/services/avq",
+          label: "Activités de la vie quotidienne (AVQ)",
+        },
+        {
+          href: "/services/avd",
+          label: "Activités de la vie domestique (AVD)",
+        },
+        { href: "/services/soins-specialises", label: "Soins spécialisés" },
+      ],
     },
-    { 
-      href: "#solutions", 
+    {
+      href: "#solutions",
       label: "Solutions",
       key: "solutions",
       hasDropdown: true,
       dropdownItems: [
-        { href: "/avantages-concurrentiels", label: "Avantages concurrentiels" },
-        { href: "/offre-de-partenariat", label: "Offre de partenariat" }
-      ]
+        {
+          href: "/avantages-concurrentiels",
+          label: "Avantages concurrentiels",
+        },
+        { href: "/offre-de-partenariat", label: "Offre de partenariat" },
+      ],
     },
     { href: "/boutique", label: "Boutique", key: "boutique" },
-    { 
-      href: "#plus", 
+    {
+      href: "#plus",
       label: "Plus",
       key: "plus",
       hasDropdown: true,
       dropdownItems: [
         { href: "/blogue", label: "Blogue" },
         { href: "/#careers", label: "Carrières" },
-        { href: "/#contact", label: "Contact" }
-      ]
+        { href: "/#contact", label: "Contact" },
+      ],
     },
   ];
 
@@ -87,11 +104,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-3 md:py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
-            <Image 
-              src="/Logo.png" 
-              alt="Confort Plus 65 Logo" 
-              width={120} 
-              height={120} 
+            <Image
+              src="/Logo.png"
+              alt="Confort Plus 65 Logo"
+              width={120}
+              height={120}
               quality={100}
               priority={true}
               className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 object-contain"
@@ -111,12 +128,14 @@ const Header = () => {
               {menuItems.map((item) => (
                 <div key={item.key} className="relative group">
                   {item.hasDropdown ? (
-                    <div 
+                    <div
                       className="relative"
                       onMouseEnter={() => {
-                        if (item.label === 'Services') handleMouseEnter('services');
-                        if (item.label === 'Solutions') handleMouseEnter('solutions');
-                        if (item.label === 'Plus') handleMouseEnter('plus');
+                        if (item.label === "Services")
+                          handleMouseEnter("services");
+                        if (item.label === "Solutions")
+                          handleMouseEnter("solutions");
+                        if (item.label === "Plus") handleMouseEnter("plus");
                       }}
                       onMouseLeave={handleMouseLeave}
                     >
@@ -127,15 +146,18 @@ const Header = () => {
                         {item.label}
                         <ChevronDown className="h-4 w-4 ml-1" />
                       </Link>
-                      {((item.label === 'Services' && isServicesDropdownOpen) ||
-                        (item.label === 'Solutions' && isSolutionsDropdownOpen) ||
-                        (item.label === 'Plus' && isPlusDropdownOpen)) && (
-                        <div 
+                      {((item.label === "Services" && isServicesDropdownOpen) ||
+                        (item.label === "Solutions" &&
+                          isSolutionsDropdownOpen) ||
+                        (item.label === "Plus" && isPlusDropdownOpen)) && (
+                        <div
                           className="absolute top-full left-0 mt-0 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
                           onMouseEnter={() => {
-                            if (item.label === 'Services') handleMouseEnter('services');
-                            if (item.label === 'Solutions') handleMouseEnter('solutions');
-                            if (item.label === 'Plus') handleMouseEnter('plus');
+                            if (item.label === "Services")
+                              handleMouseEnter("services");
+                            if (item.label === "Solutions")
+                              handleMouseEnter("solutions");
+                            if (item.label === "Plus") handleMouseEnter("plus");
                           }}
                           onMouseLeave={handleMouseLeave}
                         >
@@ -143,7 +165,11 @@ const Header = () => {
                             <Link
                               key={dropdownItem.href}
                               href={dropdownItem.href}
-                              className={`block px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors text-sm ${dropdownItem.label === 'Blogue' ? 'text-base font-medium' : ''}`}
+                              className={`block px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors text-sm ${
+                                dropdownItem.label === "Blogue"
+                                  ? "text-base font-medium"
+                                  : ""
+                              }`}
                             >
                               {dropdownItem.label}
                             </Link>
@@ -162,6 +188,37 @@ const Header = () => {
                 </div>
               ))}
             </nav>
+
+            {/* Auth Buttons */}
+            <div className="flex items-center space-x-4">
+              {status === "loading" ? (
+                <div className="h-9 w-20 bg-gray-200 animate-pulse rounded"></div>
+              ) : session ? (
+                <div className="flex items-center space-x-3">
+                  <Link href="/dashboard">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center gap-2"
+                    >
+                      <User className="h-4 w-4" />
+                      Mon compte
+                    </Button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="flex items-center space-x-3">
+                  <Link href="/auth/signin">
+                    <Button variant="outline" size="sm">
+                      Connexion
+                    </Button>
+                  </Link>
+                  <Link href="/auth/signup">
+                    <Button size="sm">Inscription</Button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile/Tablet Navigation */}
@@ -202,21 +259,30 @@ const Header = () => {
                         <button
                           className="px-2 py-2 text-gray-700 hover:text-emerald-600 transition-colors"
                           onClick={() => {
-                            if (item.label === 'Services') toggleServicesDropdown();
-                            if (item.label === 'Solutions') toggleSolutionsDropdown();
-                            if (item.label === 'Plus') togglePlusDropdown();
+                            if (item.label === "Services")
+                              toggleServicesDropdown();
+                            if (item.label === "Solutions")
+                              toggleSolutionsDropdown();
+                            if (item.label === "Plus") togglePlusDropdown();
                           }}
                         >
-                          <ChevronDown className={`h-4 w-4 transition-transform ${
-                            (item.label === 'Services' && isServicesDropdownOpen) ||
-                            (item.label === 'Solutions' && isSolutionsDropdownOpen) ||
-                            (item.label === 'Plus' && isPlusDropdownOpen) ? 'rotate-180' : ''
-                          }`} />
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform ${
+                              (item.label === "Services" &&
+                                isServicesDropdownOpen) ||
+                              (item.label === "Solutions" &&
+                                isSolutionsDropdownOpen) ||
+                              (item.label === "Plus" && isPlusDropdownOpen)
+                                ? "rotate-180"
+                                : ""
+                            }`}
+                          />
                         </button>
                       </div>
-                      {((item.label === 'Services' && isServicesDropdownOpen) ||
-                        (item.label === 'Solutions' && isSolutionsDropdownOpen) ||
-                        (item.label === 'Plus' && isPlusDropdownOpen)) && (
+                      {((item.label === "Services" && isServicesDropdownOpen) ||
+                        (item.label === "Solutions" &&
+                          isSolutionsDropdownOpen) ||
+                        (item.label === "Plus" && isPlusDropdownOpen)) && (
                         <div className="ml-4 mt-2 space-y-1">
                           {item.dropdownItems?.map((dropdownItem) => (
                             <Link
@@ -243,6 +309,45 @@ const Header = () => {
                 </div>
               ))}
             </nav>
+
+            {/* Mobile Auth Buttons */}
+            <div className="px-4 py-3 border-t border-gray-200">
+              {status === "loading" ? (
+                <div className="h-9 w-20 bg-gray-200 animate-pulse rounded mx-auto"></div>
+              ) : session ? (
+                <div className="space-y-2">
+                  <Link href="/dashboard" onClick={() => setIsMenuOpen(false)}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full flex items-center gap-2"
+                    >
+                      <User className="h-4 w-4" />
+                      Mon compte
+                    </Button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <Link
+                    href="/auth/signin"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Button variant="outline" size="sm" className="w-full">
+                      Connexion
+                    </Button>
+                  </Link>
+                  <Link
+                    href="/auth/signup"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Button size="sm" className="w-full">
+                      Inscription
+                    </Button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>

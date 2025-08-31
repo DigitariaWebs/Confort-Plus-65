@@ -123,33 +123,51 @@ export async function POST(request: NextRequest) {
                     <div class="info-label">Numéro de téléphone</div>
                     <div class="info-value"><a href="tel:${phone}" style="color: #10b981; text-decoration: none;">${phone}</a></div>
                   </div>
-                  ${serviceName ? `
+                  ${
+                    serviceName
+                      ? `
                   <div class="info-item">
                     <div class="info-label">Service demandé</div>
                     <div class="info-value"><span style="background-color: #10b981; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px;">${serviceName}</span></div>
                   </div>
-                  ` : ''}
-                  ${fileName ? `
+                  `
+                      : ""
+                  }
+                  ${
+                    fileName
+                      ? `
                   <div class="info-item">
                     <div class="info-label">Fichier joint</div>
                     <div class="info-value">${fileName}</div>
                   </div>
-                  ` : ''}
+                  `
+                      : ""
+                  }
                 </div>
               </div>
               
               <div class="divider"></div>
               
-              ${message && message.trim() ? `
+              ${
+                message && message.trim()
+                  ? `
               <div class="message-section">
-                <h3 style="color: #343a40; margin-bottom: 15px; font-size: 16px;">${formType === 'job' ? 'Lettre de motivation' : formType === 'partnership' ? 'Proposition de partenariat' : 'Détails du projet & Message'}</h3>
+                <h3 style="color: #343a40; margin-bottom: 15px; font-size: 16px;">${
+                  formType === "job"
+                    ? "Lettre de motivation"
+                    : formType === "partnership"
+                    ? "Proposition de partenariat"
+                    : "Détails du projet & Message"
+                }</h3>
                 <div class="message-content">
                   "${message}"
                 </div>
               </div>
               
               <div class="divider"></div>
-              ` : ''}
+              `
+                  : ""
+              }
               
               <div style="text-align: center; margin-top: 30px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 500px; margin: 0 auto; padding: 0 20px;">
@@ -161,7 +179,7 @@ export async function POST(request: NextRequest) {
             
             <div class="footer">
                   <p><strong>Confort Plus65</strong></p>
-    <p>contact@confortplus65.com</p>
+    <p>info@confortplus65.com</p>
               <p style="margin-top: 10px; opacity: 0.8;">Cet email a été généré automatiquement depuis le formulaire de contact de votre site web.</p>
             </div>
           </div>
@@ -177,13 +195,17 @@ INFORMATIONS CLIENT:
 • Email: ${email}
 • Téléphone: ${phone}
 • Type de demande: ${formType}
-${serviceName ? `• Service: ${serviceName}` : ''}
-${fileName ? `• Fichier joint: ${fileName}` : ''}
+${serviceName ? `• Service: ${serviceName}` : ""}
+${fileName ? `• Fichier joint: ${fileName}` : ""}
 
-${message && message.trim() ? `MESSAGE:
+${
+  message && message.trim()
+    ? `MESSAGE:
 ${message}
 
-` : ''}PROCHAINES ÉTAPES:
+`
+    : ""
+}PROCHAINES ÉTAPES:
 • Répondre dans les 24 heures pour une meilleure conversion
 • Email: ${email}
 • Téléphone: ${phone}
