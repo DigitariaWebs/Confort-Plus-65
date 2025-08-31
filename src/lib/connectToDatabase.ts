@@ -27,28 +27,43 @@ if (!global.mongoose) {
 }
 
 async function connectToDatabase() {
-  if (cached.conn) {
+  // Check if we have a connection and it's ready
+  if (cached.conn && mongoose.connection.readyState === 1) {
+    console.log("Using existing MongoDB connection")
     return cached.conn
   }
 
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      maxPoolSize: 2, // Reduce pool size for serverless
+      serverSelectionTimeoutMS: 2000, // 2 second timeout
+      socketTimeoutMS: 20000, // 20 second socket timeout
+      maxIdleTimeMS: 15000, // Close connections after 15 seconds of inactivity
+      family: 4, // Use IPv4
+      retryWrites: true,
+      retryReads: true,
     }
 
+    console.log("Creating new MongoDB connection...")
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+      console.log("MongoDB connected successfully")
       return mongoose
+    }).catch((error) => {
+      console.error("MongoDB connection error:", error)
+      cached.promise = null
+      throw error
     })
   }
 
   try {
     cached.conn = await cached.promise
+    return cached.conn
   } catch (e) {
     cached.promise = null
+    console.error("Failed to connect to MongoDB:", e)
     throw e
   }
-
-  return cached.conn
 }
 
 export default connectToDatabase

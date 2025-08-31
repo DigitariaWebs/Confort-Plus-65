@@ -17,64 +17,92 @@ export const authOptions: NextAuthOptions = {
       name: "credentials",
       credentials: {
         email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" }
+        password: { label: "Password", type: "password" },
       },
-      async authorize(credentials: Credentials | undefined): Promise<NextAuthUser | null> {
+      async authorize(
+        credentials: Credentials | undefined
+      ): Promise<NextAuthUser | null> {
         if (!credentials?.email || !credentials?.password) {
-          return null
+          console.log("Missing credentials");
+          return null;
         }
 
         try {
+          console.log("Attempting database connection...");
           // Ensure database connection
-          await connectToDatabase()
+          await connectToDatabase();
+          console.log("Database connected, looking up user...");
 
-          const user = await User.findOne({ email: credentials.email.toLowerCase() })
+          const user = await User.findOne({
+            email: credentials.email.toLowerCase(),
+          }).select("+password");
 
           if (!user) {
-            return null
+            console.log("User not found");
+            return null;
           }
 
-          const isPasswordValid = await compare(credentials.password, user.password)
+          console.log("User found, checking password...");
+          const isPasswordValid = await compare(
+            credentials.password,
+            user.password
+          );
 
           if (!isPasswordValid) {
-            return null
+            console.log("Invalid password");
+            return null;
           }
 
+          console.log("Authentication successful");
           return {
             id: String(user._id),
             email: user.email,
             name: user.name,
-          }
+          };
         } catch (error) {
-          console.error("Auth error:", error)
-          return null
+          console.error("Auth error:", error);
+          return null;
         }
-      }
-    })
+      },
+    }),
   ],
   session: {
     strategy: "jwt",
+    maxAge: 24 * 60 * 60 * 7, // 24 hours
   },
   pages: {
     signIn: "/auth/signin",
   },
   callbacks: {
-    async jwt({ token, user }: { token: JWT; user?: NextAuthUser }): Promise<JWT> {
+    async jwt({
+      token,
+      user,
+    }: {
+      token: JWT;
+      user?: NextAuthUser;
+    }): Promise<JWT> {
       if (user) {
-        token.id = user.id
+        token.id = user.id;
       }
-      return token
+      return token;
     },
-    async session({ session, token }: { session: Session; token: JWT }): Promise<Session> {
+    async session({
+      session,
+      token,
+    }: {
+      session: Session;
+      token: JWT;
+    }): Promise<Session> {
       if (token && session.user) {
         // Add id to the user object in a type-safe way
-        (session.user as typeof session.user & { id: string }).id = token.id as string
+        (session.user as typeof session.user & { id: string }).id =
+          token.id as string;
       }
-      return session
+      return session;
     },
   },
   debug: process.env.NODE_ENV === "development",
-}
+};
 
 const handler = NextAuth(authOptions)
 
