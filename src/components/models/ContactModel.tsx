@@ -219,7 +219,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, serviceName }) =
                     </motion.div>
                     <h2 className="text-2xl font-bold text-gray-800 mt-5">Demande envoyée !</h2>
                     <p className="text-gray-500 mt-2">Merci. Nous reviendrons vers vous très prochainement.</p>
-                    <button onClick={onClose} className="mt-6 bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-semibold">Fermer</button>
+                    <button onClick={onClose} className="mt-6 bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-semibold cursor-pointer">Fermer</button>
                   </motion.div>
                 ) : (
                   <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -314,7 +314,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, serviceName }) =
                           disabled={isLoading}
                           whileHover={{ scale: 1.05, y: -2 }} 
                           whileTap={{ scale: 0.98, y: 0 }} 
-                          className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-4 rounded-xl font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-4 rounded-xl font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                         >
                           {isLoading ? 'Envoi en cours...' : 'Envoyer'}
                         </motion.button>

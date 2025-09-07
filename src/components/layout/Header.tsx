@@ -257,7 +257,7 @@ const Header = () => {
                           {item.label}
                         </Link>
                         <button
-                          className="px-2 py-2 text-gray-700 hover:text-emerald-600 transition-colors"
+                          className="px-2 py-2 text-gray-700 hover:text-emerald-600 transition-colors cursor-pointer"
                           onClick={() => {
                             if (item.label === "Services")
                               toggleServicesDropdown();
