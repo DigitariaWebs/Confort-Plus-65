@@ -137,7 +137,6 @@ const HeroSection = () => {
     <FormModal
       isOpen={isModalOpen}
       onClose={closeModal}
-      formType="consultation"
     />
   </section>
 );

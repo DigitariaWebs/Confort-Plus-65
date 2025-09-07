@@ -680,10 +680,9 @@ export default function BlogPage() {
       </main>
       
       {/* Contact Modal */}
-      <FormModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        formType="service"
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
         serviceName="Accompagnement Cognitif"
       />
       <Footer />

@@ -84,7 +84,7 @@ const Header = () => {
         { href: "/offre-de-partenariat", label: "Offre de partenariat" },
       ],
     },
-    { href: "/boutique", label: "Boutique", key: "boutique" },
+    { href: "/forfaits", label: "Forfaits", key: "forfaits" },
     {
       href: "#plus",
       label: "Plus",

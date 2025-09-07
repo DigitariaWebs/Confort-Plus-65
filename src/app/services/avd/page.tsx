@@ -472,10 +472,9 @@ export default function AVDPage() {
       </main>
       
       {/* Contact Modal */}
-      <FormModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        formType="service"
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
         serviceName="AVD"
       />
       <Footer />

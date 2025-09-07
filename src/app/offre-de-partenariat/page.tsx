@@ -633,7 +633,7 @@ export default function OffreDePartenariatPage() {
       <Footer />
       
       {/* Contact Modal */}
-      <FormModal isOpen={isModalOpen} onClose={closeModal} formType="partnership" />
+      <FormModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

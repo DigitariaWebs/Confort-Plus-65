@@ -2,18 +2,16 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
-import { User, Mail, Phone, MessageSquare, CheckCircle2, Briefcase, Award, Upload, Handshake, X, AlertCircle } from 'lucide-react';
+import { User, Mail, Phone, MessageSquare, CheckCircle2, X, AlertCircle } from 'lucide-react';
 
 interface FormModalProps {
   isOpen: boolean;
   onClose: () => void;
-  formType: 'consultation' | 'service' | 'job' | 'partnership';
   serviceName?: string;
 }
 
-const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, serviceName }) => {
+const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, serviceName }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [fileName, setFileName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<{[key: string]: string}>({});
   const [apiError, setApiError] = useState('');
@@ -28,7 +26,6 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
     if (!isOpen) {
       const timer = setTimeout(() => {
         setIsSubmitted(false);
-        setFileName('');
         setFormData({ name: '', email: '', phone: '', message: '' });
         setIsLoading(false);
         setErrors({});
@@ -108,7 +105,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
     setIsLoading(true);
 
     try {
-      console.log('Submitting form data:', { ...formData, formType, serviceName });
+      console.log('Submitting form data:', { ...formData, serviceName });
       
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -117,9 +114,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
         },
         body: JSON.stringify({
           ...formData,
-          formType,
           serviceName,
-          fileName: fileName || undefined,
         }),
       });
 
@@ -161,46 +156,19 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
     }
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setFileName(e.target.files[0].name);
-    } else {
-      setFileName('');
-    }
-  };
+
 
   const titles = {
     consultation: {
       icon: <X className="w-8 h-8 text-white" />,
       title: 'Parlons de vos besoins',
       subtitle: 'Un membre de notre équipe vous contactera.',
-      formTitle: 'Consultation gratuite',
+      formTitle: serviceName ? `Demande pour : ${serviceName}` : 'Consultation gratuite',
       formSubtitle: 'Prenons contact.'
-    },
-    service: {
-      icon: <Briefcase className="w-8 h-8 text-white" />,
-      title: 'Planifions votre service',
-      subtitle: 'Nous confirmerons les détails avec vous rapidement.',
-      formTitle: `Planifier : ${serviceName}`,
-      formSubtitle: 'Organisons cela ensemble.'
-    },
-    job: {
-      icon: <Award className="w-8 h-8 text-white" />,
-      title: 'Rejoignez notre équipe',
-              subtitle: 'Nous sommes ravis de l\'intérêt que vous portez à Confort Plus 65.',
-      formTitle: 'Postuler maintenant',
-      formSubtitle: 'Faites le premier pas vers une carrière enrichissante.'
-    },
-    partnership: {
-      icon: <Handshake className="w-8 h-8 text-white" />,
-      title: 'Devenons partenaires',
-      subtitle: 'Collaborons pour offrir le meilleur service possible.',
-      formTitle: 'Demande de partenariat',
-      formSubtitle: 'Ensemble, nous sommes plus forts.'
     }
   };
 
-  const currentContent = titles[formType];
+  const currentContent = titles.consultation;
 
   return (
     <AnimatePresence>
@@ -323,24 +291,14 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose, formType, servic
                         />
                       </motion.div>
                       
-                      {formType === 'job' && (
-                        <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="relative">
-                          <label htmlFor="resume-upload" className="w-full flex items-center px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-100 transition-all">
-                            <Upload className="w-5 h-5 text-gray-400 mr-3" />
-                            <span className={`truncate ${fileName ? 'text-gray-800' : 'text-gray-500'}`}>
-                              {fileName || 'Télécharger votre CV'}
-                            </span>
-                          </label>
-                          <input id="resume-upload" type="file" onChange={handleFileChange} className="hidden" accept=".pdf,.doc,.docx" />
-                        </motion.div>
-                      )}
+
                       
                       <motion.div variants={{hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 }}} className="relative">
                         <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                         <textarea 
                           name="message"
-                          placeholder={formType === 'partnership' ? "Décrivez votre organisation et votre proposition..." : "Votre message ou lettre de motivation..."} 
-                          rows={formType === 'job' ? 3 : 4} 
+                          placeholder="Votre message..." 
+                          rows={4} 
                           value={formData.message}
                           onChange={handleInputChange}
                           className={`w-full pl-12 pr-4 py-3 bg-gray-50 border-2 rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-50 transition-all ${

@@ -355,7 +355,7 @@ export default function AvantagesConcurrentielsPage() {
       <Footer />
       
       {/* Contact Modal */}
-      <FormModal isOpen={isModalOpen} onClose={closeModal} formType="consultation" />
+      <FormModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

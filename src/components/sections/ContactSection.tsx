@@ -6,10 +6,8 @@ import FormModal from "../models/ContactModel";
 
 export const ContactSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalType, setModalType] = useState<'consultation' | 'service' | 'job' | 'partnership'>('consultation');
 
-  const openModal = (type: 'consultation' | 'service' | 'job' | 'partnership') => {
-    setModalType(type);
+  const openModal = () => {
     setIsModalOpen(true);
   };
 
@@ -75,8 +73,8 @@ export const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900">Adresse</h4>
                     <p className="text-gray-600">
-                      3242, Avenue Gonthier.Suite A<br />
-                      Montréal.Qc. H1L 6J9
+                      204, rue Saint-Sacrement, 300<br />
+                      Montréal, QC H2Y 1W8
                     </p>
                   </div>
                 </div>
@@ -94,7 +92,7 @@ export const ContactSection = () => {
               
               <div className="flex flex-col gap-6">
                 <button 
-                  onClick={() => openModal('consultation')}
+                  onClick={openModal}
                   className="bg-white text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700 border-2 border-transparent hover:border-emerald-200 px-8 py-4 text-lg font-semibold rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                 >
                   Demander une consultation
@@ -115,7 +113,6 @@ export const ContactSection = () => {
         <FormModal
           isOpen={isModalOpen}
           onClose={closeModal}
-          formType={modalType}
         />
       </div>
     </section>

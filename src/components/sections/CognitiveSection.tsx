@@ -213,10 +213,9 @@ const CognitiveSection = () => {
       </div>
       
       {/* Contact Modal */}
-      <FormModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        formType="consultation"
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
       />
     </section>
   );

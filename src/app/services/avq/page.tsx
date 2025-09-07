@@ -327,10 +327,9 @@ export default function AVQPage() {
       </main>
       
       {/* Contact Modal */}
-      <FormModal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        formType="service"
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
         serviceName="AVQ"
       />
       <Footer />
