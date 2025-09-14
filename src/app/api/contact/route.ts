@@ -105,7 +105,9 @@ export async function POST(request: NextRequest) {
               </div>
               
               <div style="text-align: center; margin-bottom: 20px;">
-                <span class="form-type-badge">${formType.toUpperCase()}</span>
+                <span class="form-type-badge">${
+                  formType ? formType.toUpperCase() : "CONTACT"
+                }</span>
               </div>
               
               <div class="client-info">
