@@ -40,7 +40,7 @@ const AboutSection = () => (
             Notre Mission
           </h3>
           <p className="text-gray-600 mb-6 text-lg">
-            Notre mission est de préserver l&apos;autonomie et la sécurité des
+            Notre mission est de l&apos;autonomie et la sécurité des
             personnes âgées, tout en soulageant leurs proches. Une présence
             réconfortante, adaptée à chaque besoin.
           </p>
